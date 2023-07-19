@@ -1,0 +1,823 @@
+<configs>
+	<append xpath="/items">
+			
+		<item name="meleeToolAxeT3Brainsaw">
+			<property name="Tags" value="melee,weapon,heavy,tool,motorTool,attStrength,perkMiner69r,perkMotherLode,brainsaw,canHaveCosmetic"/>
+			<property name="DisplayType" value="motorTool"/>
+			<property name="HoldType" value="19"/>
+			<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Chainsaw/chainsawPrefab.prefab"/>
+			<property name="Material" value="MMotorToolParts"/>
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="ItemTypeIcon" value="star"/>
+			<property name="CustomIconTint" value="163, 20, 20"/>
+			<property name="TintColor" value="163, 20, 20"/>
+			<property name="SoundIdle" value="chainsaw_idle"/>
+			<property name="Group" value="Ammo/Weapons"/> <!-- More weapon than tool -->
+			<property name="RepairExpMultiplier" value="10.8"/>
+			<property name="EconomicValue" value="1500"/>
+			<!--property name="TraderStageTemplate" value="baseTier3"/-->
+			<!--property name="UnlockedBy" value="craftingHarvestingTools"/-->
+			<property name="ShowQuality" value="true"/>
+			<property name="CustomIcon" value="meleeToolAxeT3Chainsaw"/>
+			<property name="DescriptionKey" value="BrainsawDesc"/>	
+			<property name="SoundUnholster" value="chainsaw_unholster"/>
+			<property name="SoundHolster" value="chainsaw_holster"/>			
+
+				<property class="Action0">
+				<property name="Class" value="Ranged"/>
+				<property name="Hitmask_override" value="Melee"/> <!-- "Class" value="Ranged" is hardcoded to never collide with grass regardless -->
+				<property name="UseMeleeCrosshair" value="true"/>
+				<property name="Single_magazine_usage" value="false"/>
+				<property name="Magazine_items" value="ammoGasCan"/>
+				<property name="Bullet_material" value="metal"/>
+				<property name="Reload_time" value="3.7"/>
+				<!-- <property name="Sound_start" value="chainsaw_fire_start"/> -->
+				<property name="Sound_start" value="chainsaw_fire_start"/>
+				<property name="Sound_empty" value="chainsaw_empty"/>
+				<property name="Sound_repeat" value="Sounds/Weapons/Motorized/Chainsaw/chainsaw_fire_lp"/>
+				<property name="Sound_end" value="Sounds/Weapons/Motorized/Chainsaw/chainsaw_fire_end"/>
+				<property name="Sound_reload" value="chainsaw_reload"/>
+				<property name="AutoReload" value="true"/>
+				<property name="Particles_muzzle_smoke" value="nozzlesmoke_chainsaw"/>
+				<!-- <property name="DamageBonus.wood" value="10"/>
+				<property name="DamageBonus.head" value="5"/> -->
+				<property name="SupportHarvesting" value="true"/>
+				<property name="ToolCategory.harvestingTools" value="1" param1="1"/>
+				<property name="triggerEffectTriggerPullDualsense" value="PistolTrigger"/>
+				<property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
+				<property name="triggerEffectTriggerShootDualsense" value="PistolShoot"/>
+				<property name="triggerEffectTriggerShootXbox" value="PistolShoot"/>
+			</property>
+			
+			<effect_group name="meleeToolAxeT3Brainsaw">
+				<passive_effect name="EntityDamage" operation="base_set" value="30" tags="perkMiner69r"/> <!-- Base was 6 -->
+				<passive_effect name="BlockDamage" operation="base_set" value="50" tags="perkMiner69r"/> <!-- Base was 24.3 -->
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="300" tags="perkMiner69r"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="1540,4620" tier="1,6" tags="perkMiner69r"/> <!-- Base was 1400,4200 -->
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMiner69r"/>
+				<passive_effect name="MaxRange" operation="base_set" value="2.35" tags="perkMiner69r"/>
+				<passive_effect name="BlockRange" operation="base_set" value="3.5" tags="perkMiner69r"/>
+				<passive_effect name="DismemberChance" operation="base_add" value=".75" tags="primary"/> <!-- Borrowed from Sledgehammer with tweaks and no perk dependence -->				
+
+				<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+
+				<passive_effect name="SphereCastRadius" operation="base_set" value=".1"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="100" tags="perkMiner69r"/>
+				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkMiner69r"/> <!-- random effective rng -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="-.08,.08" tags="perkMiner69r"/> <!-- random EntityDmg -->
+				<passive_effect name="EntityDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkMiner69r"/> <!-- tier bonus -->
+				<passive_effect name="PlayerExpGain" operation="perc_add" value="-.3" tags="Harvesting"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkMiner69r"/> <!-- random BlockDmg -->
+				<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkMiner69r"/> <!-- tier bonus -->
+
+				<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkMiner69r"/> <!-- random DegMax -->
+				<!--passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkMiner69r"/--> <!-- random APM -->
+				<!--passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/--> <!-- random MagazineSize -->
+				<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkMiner69r"/> <!-- random WeaponHandling -->
+
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.85" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.85" tags="stone"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.85" tags="metal"/>
+
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkMiner69r"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="500" tags="perkMiner69r"/> <!-- Base was 300 -->
+				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkMiner69r"/> <!-- 3.5s -->
+
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value=".5" tags="perkMiner69r"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value=".5" tags="perkMiner69r"/>
+				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="-.25" tags="perkMiner69r"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".25" tags="perkMiner69r"/>
+				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.45" tags="perkMiner69r"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".45" tags="perkMiner69r"/>
+
+				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1" tags="perkMiner69r"/>
+				<passive_effect name="WeaponHandling" operation="base_set" value="5" tags="perkMiner69r"/>
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="AddPart" part="Sparks" prefab="ItemModEffects/baton_electricityPrefab" parentTransform="Handle" localPos="0.07,-0.02,-0.12" localRot="90,0,0"/>
+				<triggered_effect trigger="onSelfKilledOther" action="AddBuff" buff="BrainsawBloodSplat"/>
+			</effect_group>
+			
+			<effect_group name="corpseRemoval">
+				<requirement name="!IsAlive" target="other"/>
+				<requirement name="EntityTagCompare" target="other" tags="walker,crawler,spider"/>
+					<passive_effect name="EntityDamage" operation="base_add" value="500"/>
+			</effect_group>
+		</item>
+		
+		<item name="gunRifleT3DCLXVIZeus">
+			<property name="ItemTypeIcon" value="star"/>
+			<property name="CustomIcon" value="meleeToolSalvageT3ImpactDriver"/>
+			<property name="CustomIconTint" value="180,180,255"/>
+			<property name="DescriptionKey" value="gunRifleT3DCLXVIZeusDesc"/>			
+			<property name="Tags" value="weapon,gunRifleT3DCLXVIZeus,ranged,holdBreathAiming,reloadPenalty,gun,sideAttachments,smallTopAttachments,mediumTopAttachments,largeTopAttachments,stock,magazine,selfLoading,attPerception,perkDeadEye,canHaveCosmetic,rifleSkill"/>
+			<property name="DisplayType" value="rangedGun"/>
+			<property name="HoldType" value="44"/>
+			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Bows/Crossbow/crossbowPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="Material" value="MRifleParts"/>
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="SoundJammed" value="weapon_jam"/>
+			<property name="Attachments" value="meleeToolFlashlight02"/>
+			<property name="CrosshairOnAim" value="true"/>
+			<property name="CrosshairUpAfterShot" value="true"/>
+			<property name="Sound_Sight_In" value="rifle_sight_in"/>
+			<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+			<property name="LightSource" value="lightSource"/>
+			<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+			<property name="AttachmentFlashlight" value="meleeToolFlashlight02"/>
+			<property name="Group" value="Ammo/Weapons"/>
+			<property name="RepairExpMultiplier" value="10.8"/>
+			<property name="LightValue" value=".45"/>
+			<property name="EconomicValue" value="1500"/>
+			<!--property name="TraderStageTemplate" value="baseTier3"/-->
+			<!--property name="UnlockedBy" value="craftingRifles"/-->
+			<property name="ShowQuality" value="true"/>
+			<property class="Action0">
+				<property name="Instantiate_on_load" value="false"/>
+				<property name="Auto_fire" value="true" />
+				<property name="Class" value="Catapult" />
+				<property name="Hitmask_override" value="Arrow"/>
+				<property name="Delay" value="0.250" />
+				<property name="Crosshair_min_distance" value="5" />
+				<property name="Crosshair_max_distance" value="30" />
+				<property name="Magazine_items" value="gunRifleT3DCLXVIZeusAmmo"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value="3"/>
+				<property name="Sound_start" value="chest_tier5_open"/>
+				<property name="Sound_draw" value="chest_tier5_open"/>
+				<property name="Sound_repeat" value=""/>
+				<property name="Sound_loop" value=""/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_cancel" value="chest_tier5_close"/>
+				<property name="Sound_empty" value="dryfire"/>
+				<property name="Sound_reload" value="sniperrifle_reload"/>
+				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Zoom"/>
+				<property name="CrosshairOnAim" value="true"/>
+			<property name="Zoom_max_out" value="40"/>
+			<property name="Zoom_max_in" value="40"/>
+			<property name="ScopeCameraOffset" value="0,.018,-0.1"/>
+	        <property name="zoomTriggerEffectPullDualsense" value="PistolZoom"/>
+	        <property name="zoomTriggerEffectPullXb" value="PistolZoom"/>
+				
+			</property>
+			<effect_group name="Deco">
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="AddPart" part="Base" prefab="@:Other/Items/Tools/impactDriverPrefab.prefab" parentTransform="Handle" localPos="0,-0.16,0" localRot="0,0,0"/>
+				<!--triggered_effect trigger="onSelfPrimaryActionUpdate" action="AddPart" part="Base2" prefab="@:Other/Items/Mods/Scopes/scope_2xPrefab.prefab" parentTransform="Barrel" localPos="0,0.11,0" localRot="0,0,0"/-->
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="AddPart" part="Base3" prefab="@:Other/Items/Weapons/Melee/TaserBaton/TaserBatonPrefab.prefab" parentTransform="Barrel" localPos="0,0.06,0" localRot="90,0,0"/> <!-- A21 -->
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="SetTransformActive" active="false" transform_path="ProjectileJoint"/>
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="SetTransformActive" active="false" transform_path="crossbow_mesh"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="AddPart" part="Sparks" prefab="ItemModEffects/baton_electricityPrefab" parentTransform="Barrel" localPos="0,0.06,0" localRot="90,0,0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemovePart" part="Sparks"/>
+				<triggered_effect trigger="onSelfEquipStart" action="RemovePart" part="Sparks"/>
+				<triggered_effect trigger="onReloadStart" action="RemovePart" part="Sparks"/>
+				<triggered_effect trigger="onReloadStop" action="RemovePart" part="Sparks"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="Base"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="Base1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="Base2"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="Sparks"/>
+				<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="ProjectileJoint"/>
+				<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="crossbow_mesh"/>
+			</effect_group>
+			<effect_group name="gunRifleT3DCLXVIZeus">
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="laserrifle_idle" />
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="StopSound" sound="laserrifle_idle" />
+				<triggered_effect trigger="onSelfEquipStop" action="StopSound" sound="laserrifle_idle" />
+				<triggered_effect trigger="onReloadStart" action="StopSound" sound="laserrifle_idle" />
+				<triggered_effect trigger="onReloadStop" action="StopSound" sound="laserrifle_idle" />
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="buffrailguncharging" />
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffrailguncharging" />
+				<triggered_effect trigger="onReloadStart" action="RemoveBuff" buff="buffrailguncharging" />
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffrailguncharging" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$charge" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$charge" operation="set" value="0"/>
+				<triggered_effect trigger="onReloadStart" action="ModifyCVar" cvar="$charge" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chargeB" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$chargeB" operation="set" value="0"/>
+				<triggered_effect trigger="onReloadStart" action="ModifyCVar" cvar="$chargeB" operation="set" value="0"/>
+				<passive_effect name="MaxRange" operation="base_set" value="200"/>
+				<passive_effect name="ProjectileVelocity" operation="perc_subtract" value="@$charge"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="150"/>
+				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2"/>
+				<!-- random effective rng -->
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="50"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="20"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/>
+				<!-- 2.7s -->
+				<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/>
+				<!-- tier bonus -->
+				<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkDeadEye"/>
+				<!-- random DegMax -->
+				<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05"/>
+				<!-- random APM -->
+				<passive_effect name="MagazineSize" operation="base_add" value="-.5,1.6"/>
+				<!-- random MagazineSize -->
+				<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08"/>
+				<!-- random WeaponHandling -->
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".04"/>
+				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".2"/>
+				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5"/>
+				<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2"/>
+				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="1.75"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="3.4"/>
+				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.3"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".3"/>
+				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="11"/>
+				<passive_effect name="WeaponHandling" operation="base_set" value=".7"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="200,400" tier="1,6" tags="perkDeadEye"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkDeadEye"/>
+				<passive_effect name="EntityDamage" operation="perc_subtract" value="@$chargeB"/>
+			</effect_group>
+		</item>
+		
+		<item name="gunRifleT3DCLXVIZeusAmmo">
+			<property name="CustomIcon" value="ammoDartIron"/>
+			<property name="CustomIconTint" value="102,203,223"/>
+			<property name="DescriptionKey" value="gunRifleT3DCLXVIZeusDesc"/>			
+			<property name="ItemTypeIcon" value="star"/>
+			<property name="Tags" value="ammo,ranged"/>
+			<property name="DisplayType" value="ammoBulletAP"/>
+			<property name="Meshfile" value="prefabs/electricshock"/>
+			<property name="HoldType" value="45"/>
+			<property name="HandMeshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="IsSticky" value="false"/>
+			<property name="Stacknumber" value="300"/>
+			<property name="FuelValue" value="8"/>
+			<property name="EconomicValue" value="12"/>
+			<property name="EconomicBundleSize" value="5"/>
+			<property name="Group" value="Ammo/Weapons"/>
+			<property class="Action1">
+				<property name="Class" value="Projectile"/>
+				<property name="Explosion.ParticleIndex" value="0"/>
+				<property name="Gravity" value="-3"/>
+				<property name="FlyTime" value="0"/>
+				<property name="LifeTime" value="14"/>
+			</property>
+			<effect_group name="gunRifleT3DCLXVIZeusAmmo" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="200"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="30"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value=".1" tags="wood"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth,metal,cloth"/>
+				<passive_effect name="ProjectileVelocity" operation="base_set" value="180"/>
+				<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="other" buff="buffShocked"/>
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.75"/>
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="3"/>
+				<display_value name="dTargetPenetration" value="3"/>
+				<display_value name="dTargetArmor" value="-.75"/>
+			</effect_group>
+		</item>
+		
+<item name="gunRifleT1HuntingRifleSavery">
+	<property name="Tags" value="weapon,revolver,ranged,holdBreathAiming,reloadPenalty,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,largeTopAttachments,stock,bottomAttachments,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic,rifleSkill"/>
+	<property name="DisplayType" value="rangedGunNoMag"/>
+	<property name="CustomIcon" value="gunRifleT1HuntingRifle"/>
+	<property name="CustomIconTint" value="30,10,70"/>
+	<property name="TintColor" value="30,10,70"/>
+	<property name="HoldType" value="30"/>
+	<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/HuntingRifle/HuntingRiflePrefab.prefab"/>
+	<property name="Material" value="MRifleParts"/>
+	<property name="Weight" value="1"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="Attachments" value="meleeToolFlashlight02"/>
+	<property name="CrosshairOnAim" value="true"/> <!-- aimTest -->
+	<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="LightSource" value="lightSource"/> <!-- Start: Needed for the attachment flashlight -->
+	<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+	<property name="AttachmentFlashlight" value="meleeToolFlashlight02"/> <!-- End: Needed for the attachment flashlight -->
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="LightValue" value=".45"/>
+	<property name="EconomicValue" value="1500"/>
+	<!--property name="TraderStageTemplate" value="baseTier3"/-->
+	<!--property name="UnlockedBy" value="craftingRifles"/-->
+	<property name="ShowQuality" value="true"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".5"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP"/>
+		<property name="Reload_time" value="2.66"/>
+		<property name="Sound_start" value="44magnum_fire"/>
+		<property name="Sound_repeat" value=""/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="Sound_reload" value="44magnum_reload"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="gunfire_magnum"/>
+		<property name="Particles_muzzle_fire_fpv" value="gunfire_magnum_fpv"/>
+		<property name="ScopeOffset" value="-.00062,.1115,.125"/>
+		<property name="SideOffset" value="0,0,0"/>
+		<property name="BarrelOffset" value="0,0,0"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+                <property name="triggerEffectTriggerPullDualsense" value="RifleTrigger"/>
+                <property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
+                <property name="triggerEffectTriggerShootDualsense" value="RifleShoot"/>
+                <property name="triggerEffectTriggerShootXbox" value="PistolShoot"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value="0,0,-.075"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+	</property>
+			<effect_group name="Deco">
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="AddPart" part="BaseA" prefab="@:Other/Items/Weapons/Ranged/Magnums/44MagnumIdle.FBX" parentTransform="Attachments" localPos=".001,0.01,0.19" localRot="0,90,0"/> <!-- A21 -->
+				<triggered_effect trigger="onSelfEquipStart" action="SetTransformActive" active="false" parent_transform="Attachments" transform_path="trigger"/>
+				<triggered_effect trigger="onSelfEquipStart" action="SetTransformActive" active="false" parent_transform="Attachments" transform_path="Hammer"/>
+				<triggered_effect trigger="onSelfEquipStart" action="SetTransformActive" active="false" parent_transform="Attachments" transform_path="Muzzle"/>
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="AddPart" part="BaseB" prefab="@:Other/Items/Weapons/Ranged/Magnums/44MagnumIdle.FBX" parentTransform="HuntingRifle_Mesh" localPos=".018,0.01,0.19" localRot="0,90,0"/> <!-- A21 -->
+				<triggered_effect trigger="onSelfEquipStart" action="SetTransformActive" active="false" parent_transform="HuntingRifle_Mesh" transform_path="trigger"/>
+				<triggered_effect trigger="onSelfEquipStart" action="SetTransformActive" active="false" parent_transform="HuntingRifle_Mesh" transform_path="Hammer"/>
+				<triggered_effect trigger="onSelfEquipStart" action="SetTransformActive" active="false" parent_transform="HuntingRifle_Mesh" transform_path="Scope"/>
+				<triggered_effect trigger="onSelfEquipStart" action="SetTransformActive" active="false" parent_transform="HuntingRifle_Mesh" transform_path="Muzzle"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="BaseA"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="BaseB"/>
+			</effect_group>
+	<effect_group name="gunRifleT1HuntingRifleSavery">
+		<passive_effect name="MaxRange" operation="base_set" value="150" tags="perkDeadEye"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="70" tags="perkDeadEye"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkDeadEye"/> <!-- random effective rng -->
+		<passive_effect name="EntityDamage" operation="base_add" value="8" tags="perkDeadEye"/> <!-- damage offset -->
+		<passive_effect name="BlockDamage" operation="base_add" value="-1" tags="perkDeadEye"/> <!-- damage offset -->
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="120" tags="perkDeadEye"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkDeadEye"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="12" tags="perkDeadEye"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value=".81" tags="perkDeadEye"/> <!-- 2.66s -->
+		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.08,.08" tags="perkDeadEye"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkDeadEye"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkDeadEye"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkDeadEye"/> <!-- tier bonus -->
+
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkDeadEye"/> <!-- random DegMax -->
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkDeadEye"/> --> <!-- random APM -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkDeadEye"/> <!-- random WeaponHandling -->
+
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="5" tags="perkDeadEye"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="5" tags="perkDeadEye"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".03" tags="perkDeadEye"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkDeadEye"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkDeadEye"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2" tags="perkDeadEye"/>
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value=".5" tags="perkDeadEye"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="2" tags="perkDeadEye"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.35" tags="perkDeadEye"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".35" tags="perkDeadEye"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="5" tags="perkDeadEye"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value=".7" tags="perkDeadEye"/>
+
+		<passive_effect name="DegradationMax" operation="base_set" value="204,384" tier="1,6" tags="perkDeadEye"/><!-- + 20% of 170,320 -->
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkDeadEye"/>
+		
+		<passive_effect name="DamageModifier" operation="base_add" value="50" tags="head"/>
+	</effect_group>
+</item>
+
+		<item name="gunKronosXII">
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,stock,bottomAttachments,attStrength,perkBoomstick,drumMagazine"/>
+			<property name="DisplayType" value="rangedShotgun"/>
+			<property name="ItemTypeIcon" value="star"/>
+			<property name="HoldType" value="76"/>
+			<property name="CustomIcon" value="gunShotgunT3AutoShotgun"/>
+			<property name="CustomIconTint" value="255, 165, 0"/>
+			<property name="TintColor" value="255, 165, 0"/>
+			<property name="DescriptionKey" value="KronosXIIDesc"/>			
+			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Auto Shotgun/autoShotgunPrefab.prefab"/>
+			<property name="Material" value="MShotgunParts"/>
+			<property name="Weight" value="6"/>
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="SoundJammed" value="weapon_jam"/>
+			<property name="Attachments" value="meleeToolFlashlight02"/>
+			<property name="CrosshairOnAim" value="true"/>
+			<property name="CrosshairUpAfterShot" value="true"/>
+			<property name="Sound_Sight_In" value="rifle_sight_in"/>
+			<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+			<property name="LightSource" value="lightSource"/>
+			<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+			<property name="AttachmentFlashlight" value="meleeToolFlashlight02"/>
+			<property name="Group" value="Ammo/Weapons"/>
+			<property name="RepairExpMultiplier" value="10.8"/>
+			<property name="PickupJournalEntry" value="alternateAmmoTip"/>
+			<property name="LightValue" value=".45"/>
+			<property name="EconomicValue" value="1000"/>
+			<property name="UnlockedBy" value="perkBoomstick"/> <!--Comment Out to remove dependency on Progression -->
+			<property name="ShowQuality" value="true"/>
+			<property class="Action0">
+				<property name="Class" value="Ranged"/>
+				<property name="Delay" value=".8"/>
+				<!-- obsolete if rounds per minute exists -->
+				<property name="Magazine_items" value="ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug"/>
+				<property name="Reload_time" value="4"/>
+				<property name="Sound_start" value="x12fire"/>
+				<property name="Sound_repeat" value="x12fire"/>
+				<property name="Sound_loop" value="x12fire"/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value="dryfire"/>
+				<property name="Particles_muzzle_fire" value="gunfire_pistol"/>
+				<property name="Particles_muzzle_fire_fpv" value="gunfire_AK47_fpv"/>
+				<property name="Particles_muzzle_smoke" value="gunfire_smoke"/>
+				<property name="Particles_muzzle_smoke_fpv" value="gunfire_smoke_fpv"/>
+				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+				<property name="ScopeCameraOffset" value="0,-1,0"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Zoom"/>
+				<property name="Zoom_max_out" value="55"/>
+				<property name="Zoom_max_in" value="55"/>
+				<property name="ScopeCameraOffset" value="-0.0008,-0.015,0"/> <!-- A20 -->
+				<!--property name="ScopeCameraOffset" value="0,-1,0"/--> <!-- A19 -->				
+			</property>
+			<effect_group name="Deco">
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="AddPart" part="Belt2" prefab="@:Other/Items/Mods/Scopes/ak_mounting_bracketPrefab.prefab" parentTransform="Handle" localPos="0,0.035,0.07" localRot="0,180,0"/>
+			</effect_group>
+			<effect_group name="gunKronosXII">
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="AddBuff" buff="chargeX12">
+					<requirement name="NotHasBuff" buff="chargeX12" />
+				</triggered_effect>
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$chargeX12" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="chargeX12"/>
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyScreenEffect" effect_name="Vibrant" intensity="0" fade="0"/>
+				<triggered_effect trigger="onSelfItemActivate" action="PlaySound" sound="x12on">
+					<requirement name="CVarCompare" cvar="$effectx12" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="$chargeX12" operation="GTE" value="20"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfItemDeactivate" action="PlaySound" sound="x12on">
+					<requirement name="CVarCompare" cvar="$effectx12" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="$chargeX12" operation="GTE" value="20"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfItemActivate" action="ModifyCVar" cvar="$effectx12" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="$effectx12" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="$chargeX12" operation="GTE" value="20"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfItemDeactivate" action="ModifyCVar" cvar="$effectx12" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="$effectx12" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="$chargeX12" operation="GTE" value="20"/>
+				</triggered_effect>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="300"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="100"/>
+				<passive_effect name="MaxRange" operation="perc_add" value="@$effectx12"/>
+				<passive_effect name="DamageFalloffRange" operation="perc_add" value="@$effectx12"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="30"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".15"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/>
+				<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkBoomstick"/>
+				<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05"/>
+				<passive_effect name="MagazineSize" operation="perc_add" value="-.122,.24"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08"/>
+				<passive_effect name="SpreadDegreesVertical" operation="perc_set" value="@$spreadx12"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="perc_set" value="@$spreadx12"/>
+				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="@$spreadx12"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="base_subtract" value="@$spreadx12"/>
+				<passive_effect name="KickDegreesHorizontalMin" operation="base_subtract" value="@$spreadx12"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="@$spreadx12"/>
+				<passive_effect name="IncrementalSpreadMultiplier" operation="base_add" value="@$spreadx12"/>
+				<passive_effect name="WeaponHandling" operation="base_set" value="1.7"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="190,390" tier="1,6" tags="perkBoomstick"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value=".25" tags="perkBoomstick"/>
+				<display_value name="dStatStunEffect" value="4"/>
+			</effect_group>
+		</item>
+		
+		<item name="meleeWpnSledgeT3SteelThorHammer">
+			<property name="CustomIcon" value="meleeWpnSledgeT3SteelSledgehammer"/>
+			<property name="CustomIconTint" value="180,180,255"/>
+			<property name="DescriptionKey" value="meleeWpnSledgeT3SteelThorHammerDesc"/>			
+			<property name="ItemTypeIcon" value="star"/>
+			<property name="Tags" value="blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,longShaft,attStrength,perkSkullCrusher,perkElectrocutioner,perkFlurryOfStrength,canHaveCosmetic,sledgeSkill,thorhammer"/>
+			<property name="DisplayType" value="melee"/>
+			<property name="HoldType" value="33"/>
+			<property name="Meshfile" value="@:Other/Items/Weapons/Melee/SledgeHammer/steelSledgehammerPrefab.prefab"/>
+			<property name="Material" value="MmeleeWpnSledgeParts"/>
+			<property name="Weight" value="2"/>
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="SoundJammed" value="ItemNeedsRepair"/>
+			<property name="SoundDestroy" value="metaldestroy1"/>
+			<property name="EconomicValue" value="1000"/>
+			<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
+			<property name="UnlockedBy" value="perkSkullCrusher"/>
+			<property name="ShowQuality" value="true"/>
+			<property name="SoundUnholster" value="weapon_unholster"/>
+			<property name="SoundHolster" value="weapon_holster"/>			
+
+			<property class="Action0">
+				<property name="Class" value="DynamicMelee"/>
+				<property name="Sphere" value=".15"/>
+				<!-- limit to 0.15, else the sphere cast can overlap the target already -->
+				<property name="Sound_start" value="sledge_swinglight"/>
+				<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+				<property name="UseGrazingHits" value="true"/>
+				<property name="GrazeStart" value=".515"/>
+				<property name="GrazeEnd" value=".52"/>
+				<property name="SwingDegrees" value="65"/>
+				<property name="SwingAngle" value="160"/>
+				<property class="HitSounds">
+					<property name="Override0" value="organic" param1="metalsolidhitorganic"/>
+				</property>
+				<property class="GrazeSounds">
+					<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+				</property>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="DynamicMelee"/>
+				<property name="Sphere" value=".15"/>
+				<!-- limit to 0.15, else the sphere cast can overlap the target already -->
+				<property name="Sound_start" value="sledge_swingheavy"/>
+				<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+				<property name="UsePowerAttackAnimation" value="true"/>
+				<property name="UseGrazingHits" value="true"/>
+				<property name="GrazeStart" value=".515"/>
+				<property name="GrazeEnd" value=".52"/>
+				<property name="SwingDegrees" value="110"/>
+				<property name="SwingAngle" value="90"/>
+				<property class="HitSounds">
+					<property name="Override0" value="organic" param1="metalsolidhitorganic"/>
+				</property>
+				<property class="GrazeSounds">
+					<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+				</property>
+			</property>
+			<effect_group name="Deco">
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="AddPart" part="Sparks" prefab="ParticleEffects/p_electric_shock_small" parentTransform="Handle" localPos="0,.4,-.4" localRot="90,0,0"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="Sparks"/>
+			</effect_group>
+			<effect_group name="meleeWpnSledgeT3SteelThorHammer">
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="38" tags="perkSkullCrusher,perkFlurryOfStrength"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="30" tags="primary"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="300,750" tier="1,6" tags="perkSkullCrusher"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkSkullCrusher"/>
+				<passive_effect name="MaxRange" operation="base_set" value="2.6" tags="perkSkullCrusher"/>
+				<passive_effect name="BlockRange" operation="base_set" value="3.5" tags="perkSkullCrusher"/>
+				<passive_effect name="DismemberChance" operation="base_add" value=".35" tags="perkSkullCrusher,primary"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="55" tags="perkSkullCrusher"/> <!-- meleeWpnSledgeT3SteelSledgehammer -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="-.04,.04" tags="perkSkullCrusher"/> <!-- random EntityDmg -->
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSkullCrusher"/> <!-- tier bonus -->
+				<passive_effect name="BlockDamage" operation="base_set" value="100" tags="perkSkullCrusher"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="-.04,.04" tags="perkSkullCrusher"/> <!-- random BlockDmg -->
+				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSkullCrusher"/> <!-- tier bonus -->
+				<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allHarvest"/>
+				<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allToolsHarvest"/>
+				<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="oreWoodHarvest"/>				
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="ModifyCVar" cvar="$willshock" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" cvar="$willshock" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$willshock" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffShocked">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50" />
+				</triggered_effect>
+			</effect_group>
+			<effect_group name="Power Attack">
+				<passive_effect name="EntityDamage" operation="perc_add" value="1.25" tags="secondary"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="1.25" tags="secondary"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="60" tags="secondary"/>
+				<passive_effect name="DismemberChance" operation="base_add" value=".7" tags="secondary"/>
+
+				<triggered_effect trigger="onSelfDamagedBlock" action="AddBuff" target="selfAOE" range="1.5" target_tags="zombie,animal,enemy" buff="buffShocked">
+					<requirement name="CVarCompare" cvar="$willshock" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="AddBuff" target="selfAOE" range="1.5" target_tags="zombie,animal,enemy" buff="buffShocked">
+					<requirement name="CVarCompare" cvar="$willshock" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="selfAOE" range="1.5" target_tags="zombie,animal,enemy" buff="buffShocked">
+					<requirement name="CVarCompare" cvar="$willshock" operation="Equals" value="1"/>
+				</triggered_effect>
+				
+				<!-- Repulsor from Baton -->
+				
+			<triggered_effect trigger="onSelfPrimaryActionRayHit" action="Ragdoll" target="other" duration="2.5" force="350">
+				<requirement name="HasBuff" buff="buffmodMeleeStunBatonRepulsor"/>
+				<requirement name="!HasBuff" buff="buffDrugNerdTats"/>
+				<requirement name="!EntityTagCompare" target="other" tags="trader"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="Ragdoll" target="other" duration="2.5" force="350">
+				<requirement name="HasBuff" buff="buffmodMeleeStunBatonRepulsor"/>
+				<requirement name="!HasBuff" buff="buffDrugNerdTats"/>
+				<requirement name="!EntityTagCompare" target="other" tags="trader"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfPrimaryActionRayHit" action="Ragdoll" target="otherAOE" range="1.1" target_tags="zombie,animal" duration="2.5" force="350">
+				<requirement name="HasBuff" buff="buffmodMeleeStunBatonRepulsor"/>
+				<requirement name="HasBuff" buff="buffDrugNerdTats"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="Ragdoll" target="otherAOE" range="1.1" target_tags="zombie,animal" duration="2.5" force="350">
+				<requirement name="HasBuff" buff="buffmodMeleeStunBatonRepulsor"/>
+				<requirement name="HasBuff" buff="buffDrugNerdTats"/>
+			</triggered_effect>				
+			</effect_group>
+		</item>
+		
+		<item name="gunPP-19Bizon">
+			<property name="CustomIcon" value="gunHandgunT3SMG5"/>
+			<property name="CustomIconTint" value="210,180,140"/>
+			<property name="DescriptionKey" value="gunPP-19BizonDesc"/>			
+			<property name="ItemTypeIcon" value="star"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,magazine,drumMagazine,firingMode,selfLoading,attAgility,perkGunslinger,9mmGun,canHaveCosmetic,handgunSkill,gunPP-19Bizon"/>
+			<property name="DisplayType" value="rangedGun"/>
+			<property name="HoldType" value="6"/>
+			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/SMG/smgPrefab.prefab"/>
+			<property name="Material" value="MHandGunParts"/>
+			<property name="Weight" value="6"/>
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="SoundJammed" value="weapon_jam"/>
+			<property name="Attachments" value="meleeToolFlashlight02"/>
+			<property name="TintColor" value="255,255,255"/>
+			<property name="CrosshairOnAim" value="true"/>
+			<!-- aimTest -->
+			<property name="CrosshairUpAfterShot" value="true"/>
+			<!-- aimTest -->
+			<property name="Sound_Sight_In" value="smg_sight_in"/>
+			<property name="Sound_Sight_Out" value="smg_sight_out"/>
+			<property name="Group" value="Ammo/Weapons"/>
+			<property name="RepairExpMultiplier" value="10.8"/>
+			<property name="LightValue" value=".45"/>
+			<property name="EconomicValue" value="1000"/>
+			<property name="UnlockedBy" value="perkGunslinger"/> <!--Comment Out to remove dependency on Progression -->
+			<property name="ShowQuality" value="true"/>
+			<property name="TintColor" value="210,180,140"/>
+	
+			<property class="Action0">
+				<property name="Class" value="Ranged"/>
+				<property name="Delay" value=".150"/> <!-- obsolete if rounds per minute exists -->
+				<property name="Magazine_items" value="ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP"/>
+				<property name="Reload_time" value="4.1"/>
+				<property name="Sound_start" value="smg_fire"/>
+				<property name="Sound_loop" value="smg_fire"/>
+				<property name="Sound_end" value="smg_fire_end"/>
+				<property name="Sound_empty" value="dryfire"/>
+				<property name="Sound_reload" value=""/>
+				<property name="AutoReload" value="false"/>
+				<property name="Particles_muzzle_fire" value="gunfire_SMG"/>
+				<property name="Particles_muzzle_fire_fpv" value="gunfire_SMG_fpv"/>
+				<!-- <property name="DamageBonus.head" value="4"/>
+				<property name="DamageBonus.wood" value="5"/>
+				<property name="DamageBonus.earth" value=".2"/> -->
+				<property name="ScopeOffset" value="-.000525,.1449,-.2"/>
+				<property name="SideOffset" value="0,0,0"/>
+				<property name="BarrelOffset" value="-.062,.062,.16"/>
+				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+					<property name="triggerEffectTriggerPullDualsense" value="PistolTrigger"/>
+					<property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
+					<property name="triggerEffectShootDualsense" value="PistolShoot"/>
+					<property name="triggerEffectShootXbox" value="PistolShoot"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Zoom"/>
+				<property name="Zoom_max_out" value="55"/>
+				<property name="Zoom_max_in" value="55"/>
+				<property name="ScopeCameraOffset" value="-.0003,0,-.01"/>
+					<property name="zoomTriggerEffectPullDualsense" value="PistolZoom"/>
+					<property name="zoomTriggerEffectPullXb" value="PistolZoom"/>
+			</property>
+			<effect_group name="Deco">
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="AddPart" part="Drum" prefab="@:Other/Items/Food/can_plain.fbx" parentTransform="Attachments" localPos="0,.04,0" localRot="-90,0,0"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="Drum"/>
+			</effect_group>
+			<effect_group name="gunPP-19Bizon">
+				<passive_effect name="MaxRange" operation="base_set" value="64"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="30"/>
+				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2"/>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="500"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1000"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="64"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.75"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/>
+				<passive_effect name="EntityDamage" operation="perc_subtract" value=".15"/>
+				<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkGunslinger"/>
+				<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value=".6"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value=".6"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".2"/>
+				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8"/>
+				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5"/>
+				<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2"/>
+				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value=".1"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".5"/>
+				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.1"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".1"/>
+				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.2"/>
+				<passive_effect name="WeaponHandling" operation="base_set" value="1"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="350,700" tier="1,6" tags="perkGunslinger,9mmGun"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkGunslinger,9mmGun"/>
+			</effect_group>
+		</item>
+		
+		<!-- LOOT BOX INTEGRATION -->
+		
+		<item name="GreenTicket">
+			<property name="HoldType" value="21"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="CustomIconTint" value="0,255,0" />
+			<property name="ItemTypeIcon" value="treasure"/>
+			<property name="DescriptionKey" value="GreenTicketDesc"/>			
+			<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="Stacknumber" value="150"/>
+			<property name="EconomicValue" value="1600"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Resources"/>
+		</item>
+		<item name="YellowTicket">
+			<property name="Extends" value="GreenTicket"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="DescriptionKey" value="YellowTicketDesc"/>			
+			<property name="ItemTypeIcon" value="treasure"/>
+			<property name="CustomIconTint" value="255,255,0" />
+		</item>
+		<item name="RedTicket">
+			<property name="Extends" value="GreenTicket"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="DescriptionKey" value="RedTicketDesc"/>			
+			<property name="ItemTypeIcon" value="treasure"/>
+			<property name="CustomIconTint" value="255,0,0" />
+		</item>
+		<item name="PurpleTicket">
+			<property name="Extends" value="GreenTicket"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="DescriptionKey" value="PurpleTicketDesc"/>			
+			<property name="ItemTypeIcon" value="treasure"/>
+			<property name="CustomIconTint" value="128,0,128" />
+		</item>
+				
+		<item name="LVL1GreenLootBox">
+			<property name="Extends" value="questMaster"/>
+			<property name="CustomIcon" value="cntMunitionsBoxArmy"/>
+			<property name="DescriptionKey" value="LVL1GreenLootBoxDesc"/>			
+			<property name="CustomIconTint" value="0,255,0" />
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="QuestGiven" value="greenlootbox"/>
+				<property name="Sound_start" value="UseActions/open_chest"/></property>
+		</item>
+		<item name="LVL2YellowLootBox">
+			<property name="Extends" value="LVL1GreenLootBox"/>
+			<property name="CustomIcon" value="cntMunitionsBoxArmy"/>
+			<property name="DescriptionKey" value="LVL2YellowLootBoxDesc"/>			
+			<property name="CustomIconTint" value="255,255,0" />
+			<property class="Action0">
+				<property name="QuestGiven" value="yellowlootbox"/></property>
+		</item>
+		<item name="LVL3RedLootBox">
+			<property name="Extends" value="LVL1GreenLootBox"/>
+			<property name="CustomIcon" value="cntMunitionsBoxArmy"/>
+			<property name="DescriptionKey" value="LVL3RedLootBoxDesc"/>			
+			<property name="CustomIconTint" value="255,0,0" />
+			<property class="Action0">
+				<property name="QuestGiven" value="redlootbox"/></property>
+		</item>
+		<item name="LVL4PurpleLootBox">
+			<property name="Extends" value="LVL1GreenLootBox"/>
+			<property name="CustomIcon" value="cntMunitionsBoxArmy"/>
+			<property name="DescriptionKey" value="LVL4PurpleLootBoxDesc"/>		
+			<property name="CustomIconTint" value="128,0,128" />
+			<property class="Action0">
+				<property name="QuestGiven" value="purplelootbox"/></property>
+		</item>
+
+	</append>
+</configs>

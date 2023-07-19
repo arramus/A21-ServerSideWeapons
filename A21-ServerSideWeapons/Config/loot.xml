@@ -1,0 +1,133 @@
+<configs>
+
+	<insertBefore xpath="/lootcontainers/lootgroup[@name='groupGunSafeSecure']" >
+	<lootgroup name="ServerSideWeapons">
+	<!--Weapons-->
+		<item name="meleeWpnSledgeT3SteelThorHammer" prob=".325"/>
+		<item name="meleeToolAxeT3Brainsaw" prob=".325"/>
+		<item name="gunRifleT1HuntingRifleSavery" prob=".15"/>
+		<item name="gunPP-19Bizon" prob=".15"/>
+		<item name="gunRifleT3DCLXVIZeus" prob=".01"/>
+		<item name="gunKronosXII" prob=".01"/>
+	<!--Hats/Clothing/Friends-->
+		<item name="Cow Helmet" prob="0.025"/> <!--Hat Mod-->
+		<item name="Pumpkin Hat" prob="0.025"/> <!--Hat Mod-->
+		<item name="Magnet Hat" prob="0.025"/> <!--Hat Mod-->
+		<item name="WagonWheel" prob="0.025"/> <!--Clothing Mod-->
+		<item name="Rabbit Friend" prob="0.025"/> <!--Friend Mod-->
+		<item name="Snake Friend" prob="0.025"/> <!--Friend Mod-->
+		<item name="Vulture Friend" prob="0.025"/> <!--Friend Mod-->
+		<item name="Big Backpack" prob="0.025"/> <!--Clothing Mod-->
+		<item name="Pumpkin Man" prob="0.025"/> <!--Hat Mod-->
+	<!--Mods-->
+		<item name="modWeaponDurability" prob="0.05"/> <!--Weapon Mod-->	
+	</lootgroup>
+	</insertBefore>
+
+	<append xpath="/lootcontainers/lootcontainer[@name='smallSafes']"> <!--WallSafe / DeskSafe-->
+		<item group="ServerSideWeapons" count="1,2" prob="0.5"/>
+	</append>
+	
+	<append xpath="/lootcontainers/lootcontainer[@name='gunSafe']"> <!--Gun Safe-->
+		<item group="ServerSideWeapons" count="1,2" prob="0.5"/>
+	</append>
+	
+	<append xpath="/lootcontainers/lootcontainer[@name='buriedTreasure']"> <!--Buried Loot Treasure Chest-->
+		<item group="ServerSideWeapons" count="1,2" prob="0.5"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootqualitytemplates">
+		<lootqualitytemplate name="default_qualityT">
+			<qualitytemplate level="1,999999">
+				<loot quality="1" prob="0.05"/>
+				<loot quality="2" prob="0.075"/>
+				<loot quality="3" prob="0.125"/>
+				<loot quality="4" prob="0.2"/>
+				<loot quality="5" prob="0.25"/>
+				<loot quality="6" prob="0.3"/>
+			</qualitytemplate>
+		</lootqualitytemplate>
+	</append>
+	
+	<append xpath="/lootcontainers">	
+		<lootgroup name="GreenLoot" loot_quality_template="default_qualityT">
+			<item name="meleeWpnSledgeT3SteelThorHammer" prob=".325"/>
+			<item name="meleeToolAxeT3Brainsaw" prob=".325"/>
+			<item name="gunRifleT1HuntingRifleSavery" prob=".15"/>
+			<item name="gunPP-19Bizon" prob=".15"/>
+			<item name="gunRifleT3DCLXVIZeus" prob=".025"/>
+			<item name="gunKronosXII" prob=".025"/>			
+		</lootgroup>
+		<lootgroup name="YellowLoot" loot_quality_template="default_qualityT">
+			<item name="meleeWpnSledgeT3SteelThorHammer" prob=".1"/>
+			<item name="meleeToolAxeT3Brainsaw" prob=".1"/>
+			<item name="gunRifleT1HuntingRifleSavery" prob=".3"/>
+			<item name="gunPP-19Bizon" prob=".3"/>
+			<item name="gunRifleT3DCLXVIZeus" prob=".1"/>
+			<item name="gunKronosXII" prob=".1"/>
+		</lootgroup>
+		<lootgroup name="RedLoot" loot_quality_template="default_qualityT">
+			<item name="meleeWpnSledgeT3SteelThorHammer" prob=".05"/>
+			<item name="meleeToolAxeT3Brainsaw" prob=".05"/>
+			<item name="gunRifleT1HuntingRifleSavery" prob=".275"/>
+			<item name="gunPP-19Bizon" prob=".275"/>
+			<item name="gunRifleT3DCLXVIZeus" prob=".175"/>
+			<item name="gunKronosXII" prob=".175"/>		
+		</lootgroup>
+		<lootgroup name="PurpleLoot" loot_quality_template="default_qualityT">
+			<item name="meleeWpnSledgeT3SteelThorHammer" prob=".025"/>
+			<item name="meleeToolAxeT3Brainsaw" prob=".025"/>
+			<item name="gunRifleT1HuntingRifleSavery" prob=".15"/>
+			<item name="gunPP-19Bizon" prob=".15"/>
+			<item name="gunRifleT3DCLXVIZeus" prob=".325"/>
+			<item name="gunKronosXII" prob=".325"/>
+		</lootgroup>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupSafeBooks']"> <!--All Safes-->
+		<item name="GreenTicket" count="1,4" prob=".35"/>
+		<item name="YellowTicket" count="1,3" prob=".25"/>
+		<item name="RedTicket" count="1,2" prob=".15"/>
+		<item name="PurpleTicket" count="1,2" prob=".1"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootcontainer[@name='atmLoot']"> <!-- ATM -->
+		<item name="GreenTicket" count="1,4" prob=".35"/>
+		<item name="YellowTicket" count="1,3" prob=".25"/>
+		<item name="RedTicket" count="1,2" prob=".15"/>
+		<item name="PurpleTicket" count="1,2" prob=".1"/>
+	</append>	
+
+	<insertBefore xpath="/lootcontainers/lootgroup[@name='groupZpackReg']" >
+		<lootgroup name="groupZpackReg04">
+			<item name="GreenTicket" prob=".33"/>
+			<item name="YellowTicket" prob=".1"/>		
+		</lootgroup>
+	</insertBefore>
+	<insertBefore xpath="/lootcontainers/lootgroup[@name='groupZpackStrong']" >
+		<lootgroup name="groupZpackStrong04">
+			<item name="GreenTicket" prob=".33"/>
+			<item name="YellowTicket" prob=".1"/>
+			<item name="RedTicket" prob=".05"/>		
+		</lootgroup>
+	</insertBefore>
+	<insertBefore xpath="/lootcontainers/lootgroup[@name='groupZpackBoss']" >	
+		<lootgroup name="groupZpackBoss04">
+			<item name="GreenTicket" prob=".33"/>
+			<item name="YellowTicket" prob=".1"/>
+			<item name="RedTicket" prob=".05"/>
+			<item name="PurpleTicket" prob=".022"/>		
+		</lootgroup>
+	</insertBefore>
+	
+	<append xpath="/lootcontainers/lootgroup[@name='groupZpackReg']"> <!--Regular Zombie Dropped Loot-->
+		<item group="groupZpackReg04" count="1,2"/>
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='groupZpackStrong']"> <!--Strong Zombie Dropped Loot-->
+		<item group="groupZpackStrong04" count="1,2"/>
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='groupZpackBoss']"> <!--Boss Dropped Loot-->
+		<item group="groupZpackBoss04" count="1,2"/>
+	</append>
+
+</configs>

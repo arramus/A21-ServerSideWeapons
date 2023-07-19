@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="A21-ServerSideWeapons" />
+	<DisplayName value="A21 Server Side Weapons" />
+	<Description value="Custom server side weapons." />
+	<Author value="Snufkin, oakraven, arramus, and community members" />
+	<Version value="21.0.1.0" />
+	<Website value="" />
+</xml>

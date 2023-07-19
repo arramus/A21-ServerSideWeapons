@@ -1,0 +1,80 @@
+<configs>
+	<append xpath="/recipes">
+		<recipe name="meleeToolAxeT3Brainsaw" count="1" craft_area="workbench" craft_time="240">
+			<ingredient name="meleeToolAxeT3ChainsawParts" count="4"/>
+			<ingredient name="vehicleBicycleHandlebars" count="1"/>
+			<ingredient name="smallEngine" count="1"/>
+			<ingredient name="resourceForgedSteel" count="50"/>
+		</recipe>
+		<recipe name="gunRifleT3DCLXVIZeus" count="1" craft_area="workbench" craft_time="240">
+			<ingredient name="meleeToolAxeT3ChainsawParts" count="4"/>
+			<ingredient name="meleeWpnBatonT2StunBatonParts" count="4"/>
+			<ingredient name="resourceForgedSteel" count="50"/>
+			<ingredient name="resourceMechanicalParts" count="12"/>
+			<ingredient name="resourceElectricParts" count="12"/>
+		</recipe>
+		<recipe name="gunRifleT3DCLXVIZeusAmmo" count="1" craft_area="workbench" craft_time="5">
+			<ingredient name="ammoDartIron" count="1"/>
+			<ingredient name="resourceForgedSteel" count="1"/>
+		</recipe>
+		<recipe name="gunRifleT1HuntingRifleSavery" count="1" craft_area="workbench" craft_time="240">
+			<ingredient name="gunRifleT1HuntingRifleParts" count="4"/>
+			<ingredient name="resourceForgedSteel" count="50"/>
+			<ingredient name="resourceDuctTape" count="12"/>
+			<ingredient name="resourceScrapPolymers" count="50"/>
+			<ingredient name="resourceSpring" count="12"/>		
+		</recipe>
+		<recipe name="gunKronosXII" count="1" craft_area="workbench" craft_time="240">
+			<ingredient name="gunShotgunT1DoubleBarrelParts" count="4"/>
+			<ingredient name="resourceForgedSteel" count="50"/>
+			<ingredient name="resourceDuctTape" count="12"/>
+			<ingredient name="resourceScrapPolymers" count="50"/>
+			<ingredient name="resourceSpring" count="12"/>
+		</recipe>
+		<recipe name="meleeWpnSledgeT3SteelThorHammer" count="1" craft_area="workbench" craft_time="240">
+			<ingredient name="meleeWpnSledgeT3SteelSledgehammerParts" count="4"/>
+			<ingredient name="resourceForgedSteel" count="50"/>
+			<ingredient name="resourceLeather" count="12"/>
+			<ingredient name="resourceDuctTape" count="12"/>
+			<ingredient name="resourceElectricParts" count="50"/>
+		</recipe>
+		<recipe name="gunPP-19Bizon" count="1" craft_area="workbench" craft_time="240">
+			<ingredient name="gunHandgunT1PistolParts" count="4"/>
+			<ingredient name="resourceForgedSteel" count="50"/>
+			<ingredient name="resourceDuctTape" count="12"/>
+			<ingredient name="resourceScrapPolymers" count="12"/>
+			<ingredient name="resourceSpring" count="12"/>
+		</recipe>
+		
+
+		<recipe name="LootboxMachine" count="1" craft_time="240" craft_area="workbench">
+			<ingredient name="resourceForgedIron" count="100"/>
+			<ingredient name="resourceWood" count="1000"/>
+			<ingredient name="resourceSpring" count="20"/>
+			<ingredient name="resourceMechanicalParts" count="30"/>
+			<ingredient name="resourceElectricParts" count="30"/>
+		</recipe>
+
+		<recipe name="YellowTicket" count="1" craft_time="0" >
+			<ingredient name="GreenTicket" count="10"/>
+		</recipe>
+		<recipe name="RedTicket" count="1" craft_time="0" >
+			<ingredient name="YellowTicket" count="10"/>
+		</recipe>
+		<recipe name="PurpleTicket" count="1" craft_time="0" >
+			<ingredient name="RedTicket" count="10"/>
+		</recipe>
+		<recipe name="LVL1GreenLootBox" count="1" craft_area="LootboxMachine" craft_time="0" >
+			<ingredient name="GreenTicket" count="1"/>
+		</recipe>
+		<recipe name="LVL2YellowLootBox" count="1" craft_area="LootboxMachine" craft_time="0" >
+			<ingredient name="YellowTicket" count="1"/>
+		</recipe>
+		<recipe name="LVL3RedLootBox" count="1" craft_area="LootboxMachine" craft_time="0" >
+			<ingredient name="RedTicket" count="1"/>
+		</recipe>
+		<recipe name="LVL4PurpleLootBox" count="1" craft_area="LootboxMachine" craft_time="0" >
+			<ingredient name="PurpleTicket" count="1"/>
+		</recipe>		
+	</append>
+</configs>
