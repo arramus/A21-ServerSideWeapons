@@ -22,7 +22,7 @@ Pumpkin HatDesc,item_modifiers,mod,,,"Reduces Noise, Increases Damage resistance
 Magnet Hat,item_modifiers,mod,,,Magnet Hat Mod,,,,,,,,,,,,,
 Magnet HatDesc,item_modifiers,mod,,,"Increases Impact bracing when falling from a height, and Strength. Can be found in hardened chests as a lootable item and installed in the armor headware paint slot. This hat mod is visible to other players.",,,,,,,,,,,,,
 WagonWheel,item_modifiers,mod,,,Wagon Wheel Mod,,,,,,,,,,,,,
-WagonWheelDesc,item_modifiers,mod,,,"Increases bartering skill with +10% for sales and -10% for purchases. Inreases Strength and Stamina recovery when running. Can be found in hardened chests as a lootable item and installed in the armor headware paint slot. This clothing mod is visible to other players.",,,,,,,,,,,,,
+WagonWheelDesc,item_modifiers,mod,,,"Increases bartering skill with +5% for sales and -5% for purchases. Inreases Strength and Stamina recovery when running. Can be found in hardened chests as a lootable item and installed in the armor headware paint slot. This clothing mod is visible to other players.",,,,,,,,,,,,,
 Rabbit Friend,item_modifiers,mod,,,Rabbit Friend Mod,,,,,,,,,,,,,
 Rabbit FriendDesc,item_modifiers,mod,,,"Increases Entity damage, Strength, Damage resistance, and Cold and Heat resistance. Can be found in hardened chests as a lootable item and installed in the armor headware paint slot. This clothing mod is visible to other players. かわいい兎ちゃんでしょう？",,,,,,,,,,,,,
 Snake Friend,item_modifiers,mod,,,Snake Friend Mod,,,,,,,,,,,,,
