@@ -8,6 +8,7 @@
 		<item name="meleeWpnPolearm" prob=".325"/>
 		<item name="gunRifleT1HuntingRifleSavery" prob=".15"/>
 		<item name="gunPP-19Bizon" prob=".15"/>
+		<item name="gunNewcomen" prob=".15"/>
 		<item name="gunRifleT3DCLXVIZeus" prob=".025"/>
 		<item name="gunKronosXII" prob=".025"/>
 	<!--Hats/Clothing/Friends-->
@@ -55,37 +56,41 @@
 			<item name="meleeWpnSledgeT3SteelThorHammer" prob=".25"/>
 			<item name="meleeToolAxeT3Brainsaw" prob=".25"/>
 			<item name="meleeWpnPolearm" prob=".25"/>
-			<item name="gunRifleT1HuntingRifleSavery" prob=".1"/>
-			<item name="gunPP-19Bizon" prob=".1"/>
+			<item name="gunRifleT1HuntingRifleSavery" prob=".066"/>
+			<item name="gunPP-19Bizon" prob=".066"/>
+			<item name="gunNewcomen" prob=".066"/>
 			<item name="gunRifleT3DCLXVIZeus" prob=".025"/>
-			<item name="gunKronosXII" prob=".025"/>			
+			<item name="gunKronosXII" prob=".025"/>		
 		</lootgroup>
 		<lootgroup name="YellowLoot" loot_quality_template="default_qualityT">
-			<item name="meleeWpnSledgeT3SteelThorHammer" prob=".07"/>
-			<item name="meleeToolAxeT3Brainsaw" prob=".07"/>
-			<item name="meleeWpnPolearm" prob=".07"/>
-			<item name="gunRifleT1HuntingRifleSavery" prob=".3"/>
-			<item name="gunPP-19Bizon" prob=".3"/>
-			<item name="gunRifleT3DCLXVIZeus" prob=".1"/>
-			<item name="gunKronosXII" prob=".1"/>
+			<item name="meleeWpnSledgeT3SteelThorHammer" prob=".11"/>
+			<item name="meleeToolAxeT3Brainsaw" prob=".11"/>
+			<item name="meleeWpnPolearm" prob=".11"/>
+			<item name="gunRifleT1HuntingRifleSavery" prob=".2"/>
+			<item name="gunPP-19Bizon" prob=".2"/>
+			<item name="gunNewcomen" prob=".2"/>
+			<item name="gunRifleT3DCLXVIZeus" prob=".035"/>
+			<item name="gunKronosXII" prob=".035"/>
 		</lootgroup>
 		<lootgroup name="RedLoot" loot_quality_template="default_qualityT">
-			<item name="meleeWpnSledgeT3SteelThorHammer" prob=".033"/>
-			<item name="meleeToolAxeT3Brainsaw" prob=".033"/>
-			<item name="meleeWpnPolearm" prob=".033"/>
-			<item name="gunRifleT1HuntingRifleSavery" prob=".265"/>
-			<item name="gunPP-19Bizon" prob=".265"/>
-			<item name="gunRifleT3DCLXVIZeus" prob=".185"/>
-			<item name="gunKronosXII" prob=".185"/>		
+			<item name="meleeWpnSledgeT3SteelThorHammer" prob=".02"/>
+			<item name="meleeToolAxeT3Brainsaw" prob=".02"/>
+			<item name="meleeWpnPolearm" prob=".02"/>
+			<item name="gunRifleT1HuntingRifleSavery" prob=".225"/>
+			<item name="gunPP-19Bizon" prob=".225"/>
+			<item name="gunNewcomen" prob=".225"/>
+			<item name="gunRifleT3DCLXVIZeus" prob=".133"/>
+			<item name="gunKronosXII" prob=".133"/>		
 		</lootgroup>
 		<lootgroup name="PurpleLoot" loot_quality_template="default_qualityT">
 			<item name="meleeWpnSledgeT3SteelThorHammer" prob=".0166"/>
 			<item name="meleeToolAxeT3Brainsaw" prob=".0166"/>
 			<item name="meleeWpnPolearm" prob=".0166"/>
-			<item name="gunRifleT1HuntingRifleSavery" prob=".125"/>
-			<item name="gunPP-19Bizon" prob=".125"/>
-			<item name="gunRifleT3DCLXVIZeus" prob=".35"/>
-			<item name="gunKronosXII" prob=".35"/>
+			<item name="gunRifleT1HuntingRifleSavery" prob=".1"/>
+			<item name="gunPP-19Bizon" prob=".1"/>
+			<item name="gunNewcomen" prob=".1"/>
+			<item name="gunRifleT3DCLXVIZeus" prob=".33"/>
+			<item name="gunKronosXII" prob=".33"/>
 		</lootgroup>
 	</append>
 
