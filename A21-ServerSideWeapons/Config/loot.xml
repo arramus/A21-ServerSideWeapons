@@ -5,22 +5,23 @@
 	<!--Weapons-->
 		<item name="meleeWpnSledgeT3SteelThorHammer" prob=".325"/>
 		<item name="meleeToolAxeT3Brainsaw" prob=".325"/>
+		<item name="meleeWpnPolearm" prob=".325"/>
 		<item name="gunRifleT1HuntingRifleSavery" prob=".15"/>
 		<item name="gunPP-19Bizon" prob=".15"/>
-		<item name="gunRifleT3DCLXVIZeus" prob=".01"/>
-		<item name="gunKronosXII" prob=".01"/>
+		<item name="gunRifleT3DCLXVIZeus" prob=".025"/>
+		<item name="gunKronosXII" prob=".025"/>
 	<!--Hats/Clothing/Friends-->
-		<item name="Cow Helmet" prob="0.025"/> <!--Hat Mod-->
-		<item name="Pumpkin Hat" prob="0.025"/> <!--Hat Mod-->
-		<item name="Magnet Hat" prob="0.025"/> <!--Hat Mod-->
-		<item name="WagonWheel" prob="0.025"/> <!--Clothing Mod-->
-		<item name="Rabbit Friend" prob="0.025"/> <!--Friend Mod-->
-		<item name="Snake Friend" prob="0.025"/> <!--Friend Mod-->
-		<item name="Vulture Friend" prob="0.025"/> <!--Friend Mod-->
-		<item name="Big Backpack" prob="0.025"/> <!--Clothing Mod-->
-		<item name="Pumpkin Man" prob="0.025"/> <!--Hat Mod-->
+		<item name="Cow Helmet" prob="0.05"/> <!--Hat Mod-->
+		<item name="Pumpkin Hat" prob="0.05"/> <!--Hat Mod-->
+		<item name="Magnet Hat" prob="0.05"/> <!--Hat Mod-->
+		<item name="WagonWheel" prob="0.05"/> <!--Clothing Mod-->
+		<item name="Rabbit Friend" prob="0.05"/> <!--Friend Mod-->
+		<item name="Snake Friend" prob="0.05"/> <!--Friend Mod-->
+		<item name="Vulture Friend" prob="0.05"/> <!--Friend Mod-->
+		<item name="Big Backpack" prob="0.05"/> <!--Clothing Mod-->
+		<item name="Pumpkin Man" prob="0.05"/> <!--Hat Mod-->
 	<!--Mods-->
-		<item name="modWeaponDurability" prob="0.05"/> <!--Weapon Mod-->	
+		<item name="modWeaponDurability" prob="0.075"/> <!--Weapon Mod-->	
 	</lootgroup>
 	</insertBefore>
 
@@ -51,36 +52,40 @@
 	
 	<append xpath="/lootcontainers">	
 		<lootgroup name="GreenLoot" loot_quality_template="default_qualityT">
-			<item name="meleeWpnSledgeT3SteelThorHammer" prob=".325"/>
-			<item name="meleeToolAxeT3Brainsaw" prob=".325"/>
-			<item name="gunRifleT1HuntingRifleSavery" prob=".15"/>
-			<item name="gunPP-19Bizon" prob=".15"/>
+			<item name="meleeWpnSledgeT3SteelThorHammer" prob=".25"/>
+			<item name="meleeToolAxeT3Brainsaw" prob=".25"/>
+			<item name="meleeWpnPolearm" prob=".25"/>
+			<item name="gunRifleT1HuntingRifleSavery" prob=".1"/>
+			<item name="gunPP-19Bizon" prob=".1"/>
 			<item name="gunRifleT3DCLXVIZeus" prob=".025"/>
 			<item name="gunKronosXII" prob=".025"/>			
 		</lootgroup>
 		<lootgroup name="YellowLoot" loot_quality_template="default_qualityT">
-			<item name="meleeWpnSledgeT3SteelThorHammer" prob=".1"/>
-			<item name="meleeToolAxeT3Brainsaw" prob=".1"/>
+			<item name="meleeWpnSledgeT3SteelThorHammer" prob=".07"/>
+			<item name="meleeToolAxeT3Brainsaw" prob=".07"/>
+			<item name="meleeWpnPolearm" prob=".07"/>
 			<item name="gunRifleT1HuntingRifleSavery" prob=".3"/>
 			<item name="gunPP-19Bizon" prob=".3"/>
 			<item name="gunRifleT3DCLXVIZeus" prob=".1"/>
 			<item name="gunKronosXII" prob=".1"/>
 		</lootgroup>
 		<lootgroup name="RedLoot" loot_quality_template="default_qualityT">
-			<item name="meleeWpnSledgeT3SteelThorHammer" prob=".05"/>
-			<item name="meleeToolAxeT3Brainsaw" prob=".05"/>
-			<item name="gunRifleT1HuntingRifleSavery" prob=".275"/>
-			<item name="gunPP-19Bizon" prob=".275"/>
-			<item name="gunRifleT3DCLXVIZeus" prob=".175"/>
-			<item name="gunKronosXII" prob=".175"/>		
+			<item name="meleeWpnSledgeT3SteelThorHammer" prob=".033"/>
+			<item name="meleeToolAxeT3Brainsaw" prob=".033"/>
+			<item name="meleeWpnPolearm" prob=".033"/>
+			<item name="gunRifleT1HuntingRifleSavery" prob=".265"/>
+			<item name="gunPP-19Bizon" prob=".265"/>
+			<item name="gunRifleT3DCLXVIZeus" prob=".185"/>
+			<item name="gunKronosXII" prob=".185"/>		
 		</lootgroup>
 		<lootgroup name="PurpleLoot" loot_quality_template="default_qualityT">
-			<item name="meleeWpnSledgeT3SteelThorHammer" prob=".025"/>
-			<item name="meleeToolAxeT3Brainsaw" prob=".025"/>
-			<item name="gunRifleT1HuntingRifleSavery" prob=".15"/>
-			<item name="gunPP-19Bizon" prob=".15"/>
-			<item name="gunRifleT3DCLXVIZeus" prob=".325"/>
-			<item name="gunKronosXII" prob=".325"/>
+			<item name="meleeWpnSledgeT3SteelThorHammer" prob=".0166"/>
+			<item name="meleeToolAxeT3Brainsaw" prob=".0166"/>
+			<item name="meleeWpnPolearm" prob=".0166"/>
+			<item name="gunRifleT1HuntingRifleSavery" prob=".125"/>
+			<item name="gunPP-19Bizon" prob=".125"/>
+			<item name="gunRifleT3DCLXVIZeus" prob=".35"/>
+			<item name="gunKronosXII" prob=".35"/>
 		</lootgroup>
 	</append>
 

@@ -746,6 +746,96 @@
 			</effect_group>
 		</item>
 		
+		<item name="meleeWpnPolearm">
+			<property name="CustomIcon" value="meleeWpnSpearT3SteelSpear"/>
+			<property name="CustomIconTint" value="a0a0ff"/>
+			<property name="DescriptionKey" value="meleeWpnPolearmDesc"/>			
+			<property name="ItemTypeIcon" value="star"/>
+			<property name="Tags" value="melee,grunting,medium,weapon,meleeWeapon,longShaft,attPerception,perkJavelinMaster,perkFlurryOfPerception,canHaveCosmetic,spearSkill"/>
+			<property name="DisplayType" value="melee"/>
+			<property name="Group" value="Ammo/Weapons"/>
+			<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Spear/spear_steel_Prefab.prefab"/>
+			<property name="HoldType" value="65"/>
+			<property name="Material" value="MmeleeWpnSpearParts"/>
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="SoundJammed" value="ItemNeedsRepair"/>
+			<property name="SoundDestroy" value="wooddestroy1"/>
+			<property name="RepairExpMultiplier" value="5.5"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="EconomicValue" value="700"/>
+			<property name="FuelValue" value="250"/>
+			<property name="ShowQuality" value="true"/>
+			<property name="Group" value="Ammo/Weapons,Basics,Melee Weapons,Ranged Weapons"/>
+			<property name="SoundUnholster" value="weapon_unholster"/>
+			<property name="SoundHolster" value="weapon_holster"/>
+
+	<property class="Action0">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Range" value="4.6"/>
+		<property name="Hitmask_override" value="Melee"/>
+		<property name="Sphere" value=".05"/> <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+		<property name="Sound_start" value="spear_fire"/>
+		<property name="ToolCategory.harvestingTools" value="1" param1="1"/>
+		<property name="UseGrazingHits" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="10"/>
+		<property name="SwingAngle" value="20"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="metalstaborganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+		</property>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Range" value="4.6"/>
+		<property name="Sphere" value=".15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+		<property name="Sound_start" value="spear_fire"/>
+		<property name="ToolCategory.harvestingTools" value="1" param1="1"/>
+		<property name="UsePowerAttackAnimation" value="true"/>
+	</property>
+			<effect_group name="Deco">
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="AddPart" part="Base1" prefab="@:Other/Items/Weapons/Melee/Axe/fireaxe_ironPrefab.prefab" parentTransform="Handle" localPos="0,1.6,0" localRot="0,0,0"/>
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="AddPart" part="Base2" prefab="@:Other/Items/Tools/pickaxe_ironPrefab.prefab" parentTransform="Handle" localPos="0,1.5,0" localRot="0,180,0"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="Base1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="Base2"/>
+			</effect_group>
+			<effect_group name="meleeWpnPolearm">
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkJavelinMaster"/><display_value name="dTargetArmor" value="-.5"/>
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="44" tags="perkJavelinMaster,perkFlurryOfPerception"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="22.4" tags="primary"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="400,800" tier="1,6" tags="perkJavelinMaster"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkJavelinMaster"/>
+				<passive_effect name="BlockRange" operation="base_set" value="2" tags="perkJavelinMaster"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="40" tags="perkJavelinMaster"/> <!-- meleeWpnSpearT3SteelSpear -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="-.04,.04" tags="perkJavelinMaster"/> <!-- random EntityDmg -->
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkJavelinMaster"/> <!-- tier bonus -->
+				<passive_effect name="BlockDamage" operation="base_set" value="25" tags="perkJavelinMaster"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="-.04,.04" tags="perkJavelinMaster"/> <!-- random BlockDmg -->
+				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkJavelinMaster"/> <!-- tier bonus -->
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="wood"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="stone"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="metal"/>
+				<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allHarvest"/>
+				<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allToolsHarvest"/>
+				<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="oreWoodHarvest"/>
+			</effect_group>
+			<effect_group name="Power Attack">
+				<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="50.3" tags="secondary"/>
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1" tags="perkJavelinMaster">
+					<requirement name="ProgressionLevel" progression_name="perkSpearHunter6PenetratingShaft" operation="Equals" value="1"/>
+				</passive_effect>
+			</effect_group>
+		</item>
+		
 		<!-- LOOT BOX INTEGRATION -->
 		
 		<item name="GreenTicket">
