@@ -2,7 +2,7 @@
 	<append xpath="/items">
 			
 		<item name="meleeToolAxeT3Brainsaw">
-			<property name="Tags" value="melee,weapon,heavy,tool,motorTool,attStrength,perkMiner69r,perkMotherLode,brainsaw,canHaveCosmetic"/>
+			<property name="Tags" value="melee,weapon,heavy,tool,motorTool,attStrength,perkMiner69r,perkMotherLode,brainsaw,canHaveCosmetic,harvestingSkill"/>
 			<property name="DisplayType" value="motorTool"/>
 			<property name="HoldType" value="19"/>
 			<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Chainsaw/chainsawPrefab.prefab"/>
@@ -132,7 +132,7 @@
 			<property name="LightValue" value=".45"/>
 			<property name="EconomicValue" value="1500"/>
 			<!--property name="TraderStageTemplate" value="baseTier3"/-->
-			<!--property name="UnlockedBy" value="craftingRifles"/-->
+			<property name="UnlockedBy" value="craftingRifles"/>
 			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Instantiate_on_load" value="false"/>
@@ -307,7 +307,7 @@
 	<property name="LightValue" value=".45"/>
 	<property name="EconomicValue" value="1500"/>
 	<!--property name="TraderStageTemplate" value="baseTier3"/-->
-	<!--property name="UnlockedBy" value="craftingRifles"/-->
+	<property name="UnlockedBy" value="craftingRifles"/>
 	<property name="ShowQuality" value="true"/>
 	<property name="SoundUnholster" value="weapon_unholster"/>
 	<property name="SoundHolster" value="weapon_holster"/>
@@ -400,14 +400,14 @@
 </item>
 
 		<item name="gunKronosXII">
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,stock,bottomAttachments,attStrength,perkBoomstick,drumMagazine"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,stock,bottomAttachments,attStrength,perkBoomstick,drumMagazine,shotgunSkill"/>
 			<property name="DisplayType" value="rangedShotgun"/>
 			<property name="ItemTypeIcon" value="star"/>
 			<property name="HoldType" value="76"/>
 			<property name="CustomIcon" value="gunShotgunT3AutoShotgun"/>
 			<property name="CustomIconTint" value="255, 165, 0"/>
 			<property name="TintColor" value="255, 165, 0"/>
-			<property name="DescriptionKey" value="KronosXIIDesc"/>			
+			<property name="DescriptionKey" value="gunKronosXIIDesc"/>			
 			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Auto Shotgun/autoShotgunPrefab.prefab"/>
 			<property name="Material" value="MShotgunParts"/>
 			<property name="Weight" value="6"/>
@@ -427,7 +427,7 @@
 			<property name="PickupJournalEntry" value="alternateAmmoTip"/>
 			<property name="LightValue" value=".45"/>
 			<property name="EconomicValue" value="1000"/>
-			<property name="UnlockedBy" value="perkBoomstick"/> <!--Comment Out to remove dependency on Progression -->
+			<property name="UnlockedBy" value="craftingShotguns"/>
 			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="Ranged"/>
@@ -530,7 +530,7 @@
 			<property name="SoundDestroy" value="metaldestroy1"/>
 			<property name="EconomicValue" value="1000"/>
 			<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
-			<property name="UnlockedBy" value="perkSkullCrusher"/>
+			<property name="UnlockedBy" value="craftingSledgehammers"/>
 			<property name="ShowQuality" value="true"/>
 			<property name="SoundUnholster" value="weapon_unholster"/>
 			<property name="SoundHolster" value="weapon_holster"/>			
@@ -669,7 +669,7 @@
 			<property name="RepairExpMultiplier" value="10.8"/>
 			<property name="LightValue" value=".45"/>
 			<property name="EconomicValue" value="1000"/>
-			<property name="UnlockedBy" value="perkGunslinger"/> <!--Comment Out to remove dependency on Progression -->
+			<property name="UnlockedBy" value="craftingHandguns"/>
 			<property name="ShowQuality" value="true"/>
 			<property name="TintColor" value="210,180,140"/>
 	
@@ -766,6 +766,7 @@
 			<property name="EconomicValue" value="700"/>
 			<property name="FuelValue" value="250"/>
 			<property name="ShowQuality" value="true"/>
+			<property name="UnlockedBy" value="craftingSpears"/>
 			<property name="Group" value="Ammo/Weapons,Basics,Melee Weapons,Ranged Weapons"/>
 			<property name="SoundUnholster" value="weapon_unholster"/>
 			<property name="SoundHolster" value="weapon_holster"/>
@@ -866,7 +867,7 @@
 			<property name="RepairExpMultiplier" value="10.8"/>
 			<property name="LightValue" value=".45"/>
 			<property name="EconomicValue" value="500"/>
-			<property name="UnlockedBy" value="perkGunslinger"/> <!--Comment Out to remove dependency on Progression -->
+			<property name="UnlockedBy" value="craftingHandguns"/>
 			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
 				<property name="Class" value="Ranged"/>

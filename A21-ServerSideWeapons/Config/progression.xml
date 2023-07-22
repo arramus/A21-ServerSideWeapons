@@ -1,0 +1,66 @@
+<configs>
+	<!-- Brainsaw -->
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingHarvestingTools']">
+		<display_entry item="meleeToolAxeT3Brainsaw" unlock_level="95,96,97,98,99,100" />
+	</append>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingHarvestingTools']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="95,100" value="1" tags="meleeToolAxeT3Brainsaw"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="96,97,98,99,100" value="1,2,3,4,5" tags="meleeToolAxeT3Brainsaw"/>
+	</append>
+	<!-- DCLXVI Zeus -->	
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingRifles']">
+		<display_entry item="gunRifleT3DCLXVIZeus" unlock_level="95,96,97,98,99,100" />
+	</append>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingRifles']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="95,100" value="1" tags="gunRifleT3DCLXVIZeus"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="96,97,98,99,100" value="1,2,3,4,5" tags="gunRifleT3DCLXVIZeus"/>
+	</append>
+	<!-- Savery -->	
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingRifles']">
+		<display_entry item="gunRifleT1HuntingRifleSavery" unlock_level="95,96,97,98,99,100" />
+	</append>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingRifles']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="95,100" value="1" tags="gunRifleT1HuntingRifleSavery"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="96,97,98,99,100" value="1,2,3,4,5" tags="gunRifleT1HuntingRifleSavery"/>
+	</append>
+	<!-- Kronos XII -->	
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingShotguns']">
+		<display_entry item="gunKronosXII" unlock_level="95,96,97,98,99,100" />
+	</append>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingShotguns']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="95,100" value="1" tags="gunKronosXII"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="96,97,98,99,100" value="1,2,3,4,5" tags="gunKronosXII"/>
+	</append>
+	<!-- Thor's Hammer -->	
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingSledgehammers']">
+		<display_entry item="meleeWpnSledgeT3SteelThorHammer" unlock_level="70,71,72,73,74,75" />
+	</append>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingSledgehammers']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="70,75" value="1" tags="meleeWpnSledgeT3SteelThorHammer"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="71,72,73,74,75" value="1,2,3,4,5" tags="meleeWpnSledgeT3SteelThorHammer"/>
+	</append>
+	<!-- PP-19 Bizon -->	
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']">
+		<display_entry item="gunPP-19Bizon" unlock_level="95,96,97,98,99,100" />
+	</append>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="95,100" value="1" tags="gunPP-19Bizon"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="96,97,98,99,100" value="1,2,3,4,5" tags="gunPP-19Bizon"/>
+	</append>
+	<!-- Newcomen -->		
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']">
+		<display_entry item="gunNewcomen" unlock_level="95,96,97,98,99,100" />
+	</append>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="95,100" value="1" tags="gunNewcomen"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="96,97,98,99,100" value="1,2,3,4,5" tags="gunNewcomen"/>
+	</append>
+	<!-- Polearm -->	
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingSpears']">
+		<display_entry item="meleeWpnPolearm" unlock_level="70,71,72,73,74,75" />
+	</append>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingSpears']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="70,75" value="1" tags="meleeWpnPolearm"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="71,72,73,74,75" value="1,2,3,4,5" tags="meleeWpnPolearm"/>
+	</append>
+</configs>
