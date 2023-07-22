@@ -16,10 +16,10 @@
 			<property name="RepairExpMultiplier" value="10.8"/>
 			<property name="EconomicValue" value="1500"/>
 			<!--property name="TraderStageTemplate" value="baseTier3"/-->
-			<!--property name="UnlockedBy" value="craftingHarvestingTools"/-->
+			<property name="UnlockedBy" value="craftingHarvestingTools"/>
 			<property name="ShowQuality" value="true"/>
 			<property name="CustomIcon" value="meleeToolAxeT3Chainsaw"/>
-			<property name="DescriptionKey" value="BrainsawDesc"/>	
+			<property name="DescriptionKey" value="meleeToolAxeT3BrainsawDesc"/>	
 			<property name="SoundUnholster" value="chainsaw_unholster"/>
 			<property name="SoundHolster" value="chainsaw_holster"/>			
 
