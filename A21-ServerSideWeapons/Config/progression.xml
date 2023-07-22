@@ -63,4 +63,12 @@
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="70,75" value="1" tags="meleeWpnPolearm"/>
 		<passive_effect name="CraftingTier" operation="base_add" level="71,72,73,74,75" value="1,2,3,4,5" tags="meleeWpnPolearm"/>
 	</append>
+	<!-- Black Widow -->	
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']">
+		<display_entry item="gunBowT3BlackWidow" unlock_level="95,96,97,98,99,100" />
+	</append>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="95,100" value="1" tags="gunBowT3BlackWidow"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="96,97,98,99,100" value="1,2,3,4,5" tags="gunBowT3BlackWidow"/>
+	</append>
 </configs>

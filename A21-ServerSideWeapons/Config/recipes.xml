@@ -59,6 +59,21 @@
 			<ingredient name="resourceScrapPolymers" count="12"/>
 			<ingredient name="resourceSpring" count="12"/>
 		</recipe>
+		<recipe name="gunBowT3BlackWidow" count="1" craft_area="workbench" craft_time="240" tags="workbenchCrafting,learnable">
+			<ingredient name="gunBowT3CompoundBow" count="1"/>
+			<ingredient name="resourceForgedSteel" count="50"/>			
+			<ingredient name="toolForgeCrucible" count="1"/>
+	        <ingredient name="resourceSpring" count="12"/>
+			<ingredient name="resourceScrapPolymers" count="12"/>		
+		</recipe>		
+		<recipe name="ammoRedWidow" count="1" craft_area="workbench" craft_time="5">
+			<ingredient name="resourceForgedSteel" count="1"/>
+			<ingredient name="foodRawMeat" count="1"/>	
+		</recipe>
+		<recipe name="ammoBlueWidow" count="1" craft_area="workbench" craft_time="5">
+			<ingredient name="resourceForgedSteel" count="1"/>
+			<ingredient name="resourceElectricParts" count="1"/>	
+		</recipe>
 		
 		<!-- Loot Box Machine -->		
 
