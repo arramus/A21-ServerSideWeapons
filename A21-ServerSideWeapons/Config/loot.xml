@@ -100,48 +100,69 @@
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='groupSafeBooks']"> <!--All Safes-->
-		<item name="GreenTicket" count="0,1" prob=".35"/>
-		<item name="YellowTicket" count="0,1" prob=".25"/>
-		<item name="RedTicket" count="0,1" prob=".15"/>
-		<item name="PurpleTicket" count="0,1" prob=".1"/>
+		<item name="GreenTicket" prob=".2"/>
+		<item name="YellowTicket" prob=".1"/>
+		<item name="RedTicket" prob=".075"/>
+		<item name="PurpleTicket" prob=".033"/>
 	</append>
 
 	<append xpath="/lootcontainers/lootcontainer[@name='atmLoot']"> <!-- ATM -->
-		<item name="GreenTicket" count="0,1" prob=".35"/>
-		<item name="YellowTicket" count="0,1" prob=".25"/>
-		<item name="RedTicket" count="0,1" prob=".15"/>
-		<item name="PurpleTicket" count="0,1" prob=".1"/>
+		<item name="GreenTicket" prob=".2"/>
+		<item name="YellowTicket" prob=".1"/>
+		<item name="RedTicket" prob=".05"/>
+		<item name="PurpleTicket" prob=".025"/>
 	</append>	
 
 	<insertBefore xpath="/lootcontainers/lootgroup[@name='groupZpackReg']" >
 		<lootgroup name="groupZpackReg04">
-			<item name="GreenTicket" prob=".33"/>
-			<item name="YellowTicket" prob=".1"/>		
+			<item name="GreenTicket" prob=".5"/>
+			<item name="YellowTicket" prob=".25"/>
+			<item name="modWeaponDurability" prob="0.15"/>
+			<item group="group9mmSmall"/>
+			<item group="group762mmSmall"/>
+			<item group="group44MagnumSmall" loot_prob_template="ProbT1Cap"/>
+			<item group="groupShotgunShellSmall"/>
+			<item group="groupArrowIronSmall" loot_prob_template="med"/>
+			<item group="groupCrossbowBoltIronSmall" loot_prob_template="med"/>			
 		</lootgroup>
-	</insertBefore>
+	</insertBefore> <!-- groupAmmoSmall Fillers -->
 	<insertBefore xpath="/lootcontainers/lootgroup[@name='groupZpackStrong']" >
 		<lootgroup name="groupZpackStrong04">
-			<item name="GreenTicket" prob=".33"/>
-			<item name="YellowTicket" prob=".1"/>
-			<item name="RedTicket" prob=".05"/>		
+			<item name="GreenTicket" prob=".35"/>
+			<item name="YellowTicket" prob=".25"/>
+			<item name="RedTicket" prob=".15"/>
+			<item name="PurpleTicket" prob=".075"/>
+			<item name="modWeaponDurability" prob="0.15"/>
+			<item group="group9mmMedium"/>
+			<item group="group762mmMedium"/>
+			<item group="group44MagnumMedium" loot_prob_template="ProbT1Cap"/>
+			<item group="groupShotgunShellMedium"/>
+			<item group="groupArrowIronMedium" loot_prob_template="med"/>
+			<item group="groupCrossbowBoltIronMedium" loot_prob_template="med"/>			
 		</lootgroup>
-	</insertBefore>
+	</insertBefore> <!-- groupAmmoMedium Fillers -->
 	<insertBefore xpath="/lootcontainers/lootgroup[@name='groupZpackBoss']" >	
 		<lootgroup name="groupZpackBoss04">
+			<item name="GreenTicket" prob=".1"/>
 			<item name="YellowTicket" prob=".1"/>
-			<item name="RedTicket" prob=".05"/>
-			<item name="PurpleTicket" prob=".022"/>		
+			<item name="RedTicket" prob=".1"/>
+			<item name="PurpleTicket" prob=".075"/>
+			<item name="modWeaponDurability" prob="0.15"/>
+			<item group="group9mmLarge"/>
+			<item group="group762mmLarge"/>
+			<item group="group44MagnumLarge" loot_prob_template="ProbT1Cap"/>
+			<item group="groupShotgunShellLarge"/>			
 		</lootgroup>
-	</insertBefore>
+	</insertBefore> <!-- groupAmmoLarge Fillers -->
 	
 	<append xpath="/lootcontainers/lootgroup[@name='groupZpackReg']"> <!--Regular Zombie Dropped Loot-->
-		<item group="groupZpackReg04" count="1" prob=".25"/>
+		<item group="groupZpackReg04"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupZpackStrong']"> <!--Strong Zombie Dropped Loot-->
-		<item group="groupZpackStrong04" count="1" prob=".25"/>
+		<item group="groupZpackStrong04"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupZpackBoss']"> <!--Boss Dropped Loot-->
-		<item group="groupZpackBoss04" count="1" prob=".25"/>
+		<item group="groupZpackBoss04"/>
 	</append>
 
 </configs>
