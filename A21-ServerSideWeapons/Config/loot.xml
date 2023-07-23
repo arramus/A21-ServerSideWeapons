@@ -28,11 +28,11 @@
 	</insertBefore>
 
 	<append xpath="/lootcontainers/lootcontainer[@name='smallSafes']"> <!--WallSafe / DeskSafe-->
-		<item group="ServerSideWeapons" count="1,2" prob="0.5"/>
+		<item group="ServerSideWeapons" count="1,2" prob="0.25"/>
 	</append>
 	
 	<append xpath="/lootcontainers/lootcontainer[@name='gunSafe']"> <!--Gun Safe-->
-		<item group="ServerSideWeapons" count="1,2" prob="0.5"/>
+		<item group="ServerSideWeapons" count="1,2" prob="0.25"/>
 	</append>
 	
 	<append xpath="/lootcontainers/lootcontainer[@name='buriedTreasure']"> <!--Buried Loot Treasure Chest-->
@@ -100,17 +100,17 @@
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='groupSafeBooks']"> <!--All Safes-->
-		<item name="GreenTicket" count="1,4" prob=".35"/>
-		<item name="YellowTicket" count="1,3" prob=".25"/>
-		<item name="RedTicket" count="1,2" prob=".15"/>
-		<item name="PurpleTicket" count="1,2" prob=".1"/>
+		<item name="GreenTicket" count="0,1" prob=".35"/>
+		<item name="YellowTicket" count="0,1" prob=".25"/>
+		<item name="RedTicket" count="0,1" prob=".15"/>
+		<item name="PurpleTicket" count="0,1" prob=".1"/>
 	</append>
 
 	<append xpath="/lootcontainers/lootcontainer[@name='atmLoot']"> <!-- ATM -->
-		<item name="GreenTicket" count="1,4" prob=".35"/>
-		<item name="YellowTicket" count="1,3" prob=".25"/>
-		<item name="RedTicket" count="1,2" prob=".15"/>
-		<item name="PurpleTicket" count="1,2" prob=".1"/>
+		<item name="GreenTicket" count="0,1" prob=".35"/>
+		<item name="YellowTicket" count="0,1" prob=".25"/>
+		<item name="RedTicket" count="0,1" prob=".15"/>
+		<item name="PurpleTicket" count="0,1" prob=".1"/>
 	</append>	
 
 	<insertBefore xpath="/lootcontainers/lootgroup[@name='groupZpackReg']" >
@@ -128,7 +128,6 @@
 	</insertBefore>
 	<insertBefore xpath="/lootcontainers/lootgroup[@name='groupZpackBoss']" >	
 		<lootgroup name="groupZpackBoss04">
-			<item name="GreenTicket" prob=".33"/>
 			<item name="YellowTicket" prob=".1"/>
 			<item name="RedTicket" prob=".05"/>
 			<item name="PurpleTicket" prob=".022"/>		
@@ -136,13 +135,13 @@
 	</insertBefore>
 	
 	<append xpath="/lootcontainers/lootgroup[@name='groupZpackReg']"> <!--Regular Zombie Dropped Loot-->
-		<item group="groupZpackReg04" count="1,2"/>
+		<item group="groupZpackReg04" count="1" prob=".25"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupZpackStrong']"> <!--Strong Zombie Dropped Loot-->
-		<item group="groupZpackStrong04" count="1,2"/>
+		<item group="groupZpackStrong04" count="1" prob=".25"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupZpackBoss']"> <!--Boss Dropped Loot-->
-		<item group="groupZpackBoss04" count="1,2"/>
+		<item group="groupZpackBoss04" count="1" prob=".25"/>
 	</append>
 
 </configs>
