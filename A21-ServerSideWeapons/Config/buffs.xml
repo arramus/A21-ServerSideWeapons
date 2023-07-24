@@ -1,6 +1,7 @@
 <configs>
 
 <append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
+	<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="chargeVulcan"/>
 	<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffrailguncharging"/>
 </append>
 
@@ -57,8 +58,7 @@
 					<requirement name="CVarCompare" cvar="$chargeB" operation="GTE" value="-0.5"/>
 				</triggered_effect>
 			</effect_group>
-		</buff>
-		
+		</buff>		
 		
 		<!-- Kronos -->		
 		
@@ -132,6 +132,99 @@
 				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="X12displayA"/>
 				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="X12displayB"/>
 				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="X12displayC"/>
+			</effect_group>
+		</buff>
+		
+		<!-- Vampire Gauntlets -->	
+		
+		<buff name="VampiredisplayC" icon="ui_game_symbol_skull" icon_color="255,0,255" icon_blink="true">
+			<stack_type value="ignore"/>
+			<display_value value="$vampirecharge"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="VampiredisplayA"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="VampiredisplayB"/>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="x12on"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$vampirecharge" operation="set" value="10"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Dead" intensity="1" fade=".25"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Vibrant" intensity="0.5" fade=".25"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="x12off"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Vibrant" intensity="0" fade=".25"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Dead" intensity="0" fade=".25"/>
+				
+				
+				<passive_effect name="HealthSteal" operation="base_add" value=".5"/>
+				<passive_effect name="WalkSpeed" operation="perc_add" value="0.5"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value="0.5"/>
+				<passive_effect name="CrouchSpeed" operation="perc_add" value="0.5"/>
+			</effect_group>
+		</buff>
+		<buff name="VampiredisplayB" icon="ui_game_symbol_skull" icon_color="0,255,0" icon_blink="true">
+			<stack_type value="ignore"/>
+			<display_value value="$vampirecharge"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="VampiredisplayA"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="VampiredisplayC"/>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="x12ready"/>
+			</effect_group>
+		</buff>
+		<buff name="VampiredisplayA" icon="ui_game_symbol_skull" icon_color="100,100,100" icon_blink="false">
+			<stack_type value="ignore"/>
+			<display_value value="$vampirecharge"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="VampiredisplayB"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="VampiredisplayC"/>
+			</effect_group>
+		</buff>
+		<buff name="chargevampire" hidden="true">
+			<stack_type value="ignore"/>
+			<update_rate value=".1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$vampirecharge" operation="add" value="-.1">
+					<requirement name="CVarCompare" cvar="$effectvampire" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$vampirecharge" operation="GT" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$vampirecharge" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="$vampirecharge" operation="LT" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$effectvampire" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="$vampirecharge" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VampiredisplayA">
+					<requirement name="CVarCompare" cvar="$effectvampire" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="$vampirecharge" operation="LT" value="20"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VampiredisplayB">
+					<requirement name="CVarCompare" cvar="$effectvampire" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="$vampirecharge" operation="GTE" value="20"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VampiredisplayC">
+					<requirement name="CVarCompare" cvar="$effectvampire" operation="Equals" value="1"/>
+				</triggered_effect>
+				
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="VampiredisplayA"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="VampiredisplayB"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="VampiredisplayC"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$vampirecharge" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$effectvampire" operation="set" value="0"/>
+			</effect_group>
+		</buff>
+		
+		<!-- Vulcan -->
+		
+		<buff name="chargeVulcan" hidden="true">
+			<stack_type value="ignore"/>
+			<update_rate value=".1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$chargeV" operation="add" value="-.15">
+					<requirement name="CVarCompare" cvar="$vulcanCharging" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="$chargeV" operation="GTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$chargeV" operation="add" value=".15">
+					<requirement name="CVarCompare" cvar="$vulcanCharging" operation="GTE" value="1"/>
+					<requirement name="CVarCompare" cvar="$chargeV" operation="LTE" value="2"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$chargeV" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$vulcanCharging" operation="set" value="0"/>
 			</effect_group>
 		</buff>
 		

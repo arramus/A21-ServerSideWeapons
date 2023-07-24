@@ -50,5 +50,19 @@
 			<MaxVoicesPerEntity value="6"/>
 			<MaxRepeatRate value="0.001"/>
 		</SoundDataNode>
+		
+		<SoundDataNode name="VulcanWindup">
+			<AudioSource name="Sounds/AudioSource_Amb_Med"/>
+			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="Sounds/Electricity/Turret/turret_windup"/>
+			<LowestPitch name="0"/>
+			<HighestPitch name="0"/>
+			<LocalCrouchVolumeScale value="1.0"/>
+			<CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="20"/>
+			<MaxVoicesPerEntity value="6"/>
+			<MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
 	</append>
 </configs>

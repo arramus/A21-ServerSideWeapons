@@ -6,12 +6,15 @@
 		<item name="meleeWpnSledgeT3SteelThorHammer" prob=".325"/>
 		<item name="meleeToolAxeT3Brainsaw" prob=".325"/>
 		<item name="meleeWpnPolearm" prob=".325"/>
+		<item name="meleeWpnVampireGauntlets" prob=".325"/>
 		<item name="gunRifleT1HuntingRifleSavery" prob=".15"/>
 		<item name="gunPP-19Bizon" prob=".15"/>
 		<item name="gunNewcomen" prob=".15"/>
+		<item name="gunShotgunQuadrupleBarrel" prob=".15"/>
 		<item name="gunRifleT3DCLXVIZeus" prob=".025"/>
 		<item name="gunKronosXII" prob=".025"/>
 		<item name="gunBowT3BlackWidow" prob=".025"/>
+		<item name="gunVulcan" prob=".025"/>
 	<!--Hats/Clothing/Friends-->
 		<item name="Cow Helmet" prob="0.05"/> <!--Hat Mod-->
 		<item name="Pumpkin Hat" prob="0.05"/> <!--Hat Mod-->
@@ -54,69 +57,81 @@
 	
 	<append xpath="/lootcontainers">	
 		<lootgroup name="GreenLoot" loot_quality_template="default_qualityT">
-			<item name="meleeWpnSledgeT3SteelThorHammer" prob=".25"/>
-			<item name="meleeToolAxeT3Brainsaw" prob=".25"/>
-			<item name="meleeWpnPolearm" prob=".25"/>
-			<item name="gunRifleT1HuntingRifleSavery" prob=".066"/>
-			<item name="gunPP-19Bizon" prob=".066"/>
-			<item name="gunNewcomen" prob=".066"/>
-			<item name="gunRifleT3DCLXVIZeus" prob=".0225"/>
-			<item name="gunKronosXII" prob=".0225"/>
-			<item name="gunBowT3BlackWidow" prob=".0225"/>			
+			<item name="meleeWpnSledgeT3SteelThorHammer" prob=".2"/>
+			<item name="meleeToolAxeT3Brainsaw" prob=".2"/>
+			<item name="meleeWpnPolearm" prob=".2"/>
+			<item name="meleeWpnVampireGauntlets" prob=".2"/>			
+			<item name="gunRifleT1HuntingRifleSavery" prob=".04"/>
+			<item name="gunPP-19Bizon" prob=".04"/>
+			<item name="gunNewcomen" prob=".04"/>
+			<item name="gunShotgunQuadrupleBarrel" prob=".04"/>			
+			<item name="gunRifleT3DCLXVIZeus" prob=".01"/>
+			<item name="gunKronosXII" prob=".01"/>
+			<item name="gunBowT3BlackWidow" prob=".01"/>
+			<item name="gunVulcan" prob=".01"/>		
 		</lootgroup>
 		<lootgroup name="YellowLoot" loot_quality_template="default_qualityT">
-			<item name="meleeWpnSledgeT3SteelThorHammer" prob=".11"/>
-			<item name="meleeToolAxeT3Brainsaw" prob=".11"/>
-			<item name="meleeWpnPolearm" prob=".11"/>
-			<item name="gunRifleT1HuntingRifleSavery" prob=".2"/>
-			<item name="gunPP-19Bizon" prob=".2"/>
-			<item name="gunNewcomen" prob=".2"/>
-			<item name="gunRifleT3DCLXVIZeus" prob=".0235"/>
-			<item name="gunKronosXII" prob=".0235"/>
-			<item name="gunBowT3BlackWidow" prob=".0235"/>
+			<item name="meleeWpnSledgeT3SteelThorHammer" prob=".15"/>
+			<item name="meleeToolAxeT3Brainsaw" prob=".15"/>
+			<item name="meleeWpnPolearm" prob=".15"/>
+			<item name="meleeWpnVampireGauntlets" prob=".15"/>			
+			<item name="gunRifleT1HuntingRifleSavery" prob=".075"/>
+			<item name="gunPP-19Bizon" prob=".075"/>
+			<item name="gunNewcomen" prob=".075"/>
+			<item name="gunShotgunQuadrupleBarrel" prob=".075"/>			
+			<item name="gunRifleT3DCLXVIZeus" prob=".025"/>
+			<item name="gunKronosXII" prob=".025"/>
+			<item name="gunBowT3BlackWidow" prob=".025"/>
+			<item name="gunVulcan" prob=".025"/>
 		</lootgroup>
 		<lootgroup name="RedLoot" loot_quality_template="default_qualityT">
-			<item name="meleeWpnSledgeT3SteelThorHammer" prob=".02"/>
-			<item name="meleeToolAxeT3Brainsaw" prob=".02"/>
-			<item name="meleeWpnPolearm" prob=".02"/>
-			<item name="gunRifleT1HuntingRifleSavery" prob=".22"/>
-			<item name="gunPP-19Bizon" prob=".22"/>
-			<item name="gunNewcomen" prob=".22"/>
+			<item name="meleeWpnSledgeT3SteelThorHammer" prob=".025"/>
+			<item name="meleeToolAxeT3Brainsaw" prob=".025"/>
+			<item name="meleeWpnPolearm" prob=".025"/>
+			<item name="meleeWpnVampireGauntlets" prob=".025"/>			
+			<item name="gunRifleT1HuntingRifleSavery" prob=".125"/>
+			<item name="gunPP-19Bizon" prob=".125"/>
+			<item name="gunNewcomen" prob=".125"/>
+			<item name="gunShotgunQuadrupleBarrel" prob=".125"/>			
 			<item name="gunRifleT3DCLXVIZeus" prob=".1"/>
 			<item name="gunKronosXII" prob=".1"/>
-			<item name="gunBowT3BlackWidow" prob=".1"/>			
+			<item name="gunBowT3BlackWidow" prob=".1"/>
+			<item name="gunVulcan" prob=".1"/>		
 		</lootgroup>
 		<lootgroup name="PurpleLoot" loot_quality_template="default_qualityT">
 			<item name="meleeWpnSledgeT3SteelThorHammer" prob=".01"/>
 			<item name="meleeToolAxeT3Brainsaw" prob=".01"/>
 			<item name="meleeWpnPolearm" prob=".01"/>
-			<item name="gunRifleT1HuntingRifleSavery" prob=".0775"/>
-			<item name="gunPP-19Bizon" prob=".0775"/>
-			<item name="gunNewcomen" prob=".0775"/>
-			<item name="gunRifleT3DCLXVIZeus" prob=".25"/>
-			<item name="gunKronosXII" prob=".25"/>
-			<item name="gunBowT3BlackWidow" prob=".25"/>	
+			<item name="meleeWpnVampireGauntlets" prob=".01"/>			
+			<item name="gunRifleT1HuntingRifleSavery" prob=".04"/>
+			<item name="gunPP-19Bizon" prob=".04"/>
+			<item name="gunNewcomen" prob=".04"/>
+			<item name="gunShotgunQuadrupleBarrel" prob=".04"/>			
+			<item name="gunRifleT3DCLXVIZeus" prob=".2"/>
+			<item name="gunKronosXII" prob=".2"/>
+			<item name="gunBowT3BlackWidow" prob=".2"/>
+			<item name="gunVulcan" prob=".2"/>
 		</lootgroup>
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='groupSafeBooks']"> <!--All Safes-->
 		<item name="GreenTicket" prob=".2"/>
 		<item name="YellowTicket" prob=".1"/>
-		<item name="RedTicket" prob=".075"/>
-		<item name="PurpleTicket" prob=".033"/>
+		<item name="RedTicket" prob=".05"/>
+		<item name="PurpleTicket" prob=".025"/>
 	</append>
 
 	<append xpath="/lootcontainers/lootcontainer[@name='atmLoot']"> <!-- ATM -->
-		<item name="GreenTicket" prob=".2"/>
-		<item name="YellowTicket" prob=".1"/>
-		<item name="RedTicket" prob=".05"/>
-		<item name="PurpleTicket" prob=".025"/>
+		<item name="GreenTicket" prob=".15"/>
+		<item name="YellowTicket" prob=".075"/>
+		<item name="RedTicket" prob=".035"/>
+		<item name="PurpleTicket" prob=".015"/>
 	</append>	
 
 	<insertBefore xpath="/lootcontainers/lootgroup[@name='groupZpackReg']" >
 		<lootgroup name="groupZpackReg04">
-			<item name="GreenTicket" prob=".5"/>
-			<item name="YellowTicket" prob=".25"/>
+			<item name="GreenTicket" prob=".2"/>
+			<item name="YellowTicket" prob=".1"/>
 			<item name="modWeaponDurability" prob="0.15"/>
 			<item group="group9mmSmall"/>
 			<item group="group762mmSmall"/>
@@ -128,10 +143,10 @@
 	</insertBefore> <!-- groupAmmoSmall Fillers -->
 	<insertBefore xpath="/lootcontainers/lootgroup[@name='groupZpackStrong']" >
 		<lootgroup name="groupZpackStrong04">
-			<item name="GreenTicket" prob=".35"/>
-			<item name="YellowTicket" prob=".25"/>
-			<item name="RedTicket" prob=".15"/>
-			<item name="PurpleTicket" prob=".075"/>
+			<item name="GreenTicket" prob=".2"/>
+			<item name="YellowTicket" prob=".1"/>
+			<item name="RedTicket" prob=".035"/>
+			<item name="PurpleTicket" prob=".015"/>
 			<item name="modWeaponDurability" prob="0.15"/>
 			<item group="group9mmMedium"/>
 			<item group="group762mmMedium"/>
@@ -143,10 +158,10 @@
 	</insertBefore> <!-- groupAmmoMedium Fillers -->
 	<insertBefore xpath="/lootcontainers/lootgroup[@name='groupZpackBoss']" >	
 		<lootgroup name="groupZpackBoss04">
-			<item name="GreenTicket" prob=".1"/>
-			<item name="YellowTicket" prob=".1"/>
-			<item name="RedTicket" prob=".1"/>
-			<item name="PurpleTicket" prob=".075"/>
+			<item name="GreenTicket" prob=".15"/>
+			<item name="YellowTicket" prob=".075"/>
+			<item name="RedTicket" prob=".05"/>
+			<item name="PurpleTicket" prob=".035"/>
 			<item name="modWeaponDurability" prob="0.15"/>
 			<item group="group9mmLarge"/>
 			<item group="group762mmLarge"/>

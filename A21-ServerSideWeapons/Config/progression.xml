@@ -71,4 +71,28 @@
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="95,100" value="1" tags="gunBowT3BlackWidow"/>
 		<passive_effect name="CraftingTier" operation="base_add" level="96,97,98,99,100" value="1,2,3,4,5" tags="gunBowT3BlackWidow"/>
 	</append>
+	<!-- Quad Shotgun -->
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingShotguns']">
+		<display_entry item="gunShotgunQuadrupleBarrel" unlock_level="95,96,97,98,99,100" />
+	</append>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingShotguns']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="95,100" value="1" tags="gunShotgunQuadrupleBarrel"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="96,97,98,99,100" value="1,2,3,4,5" tags="gunShotgunQuadrupleBarrel"/>
+	</append>
+	<!-- Vampire Gauntlets -->
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingKnuckles']">
+		<display_entry item="meleeWpnVampireGauntlets" unlock_level="70,71,72,73,74,75" />
+	</append>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingKnuckles']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="70,75" value="1" tags="meleeWpnVampireGauntlets"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="71,72,73,74,75" value="1,2,3,4,5" tags="meleeWpnVampireGauntlets"/>
+	</append>
+	<!-- Vulcan -->
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingMachineGuns']">
+		<display_entry item="gunVulcan" unlock_level="95,96,97,98,99,100" />
+	</append>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingMachineGuns']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="95,100" value="1" tags="gunVulcan"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="96,97,98,99,100" value="1,2,3,4,5" tags="gunVulcan"/>
+	</append>
 </configs>
