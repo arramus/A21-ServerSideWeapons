@@ -1,0 +1,177 @@
+<configs>
+	<append xpath="/items">
+			
+		<item name="Railgun">
+			<property name="ItemTypeIcon" value="star"/>
+			<property name="CustomIcon" value="gunRifleT3SniperRifle"/>
+			<property name="CustomIconTint" value="180,180,255"/>
+			<property name="DescriptionKey" value="RailgunDesc"/>			
+			<property name="Tags" value="weapon,railgun,ranged,holdBreathAiming,reloadPenalty,gun,sideAttachments,smallTopAttachments,mediumTopAttachments,largeTopAttachments,stock,magazine,selfLoading,attPerception,perkDeadEye,canHaveCosmetic,rifleSkill"/>
+			<property name="DisplayType" value="rangedGun"/>
+			<property name="HoldType" value="11"/>
+			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Bows/Crossbow/crossbowPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="Material" value="MRifleParts"/>
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="SoundJammed" value="weapon_jam"/>
+			<property name="Attachments" value="meleeToolFlashlight02"/>
+			<property name="CrosshairOnAim" value="true"/>
+			<property name="CrosshairUpAfterShot" value="true"/>
+			<property name="Sound_Sight_In" value="rifle_sight_in"/>
+			<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+			<property name="LightSource" value="lightSource"/>
+			<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+			<property name="AttachmentFlashlight" value="meleeToolFlashlight02"/>
+			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+			<property name="RepairExpMultiplier" value="10.8"/>
+			<property name="LightValue" value=".45"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="UnlockedBy" value="craftingRifles"/>
+			<property name="ShowQuality" value="true"/>
+			<property class="Action0">
+				<property name="Instantiate_on_load" value="false"/>
+				<property name="Auto_fire" value="true" />
+				<property name="Class" value="Catapult" />
+				<property name="Hitmask_override" value="Arrow"/>
+				<property name="Delay" value="0.250" />
+				<property name="Crosshair_min_distance" value="5" />
+				<property name="Crosshair_max_distance" value="30" />
+				<property name="Magazine_items" value="RailgunAmmo"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value="3"/>
+				<property name="Sound_start" value="chest_tier5_open"/>
+				<property name="Sound_draw" value="chest_tier5_open"/>
+				<property name="Sound_repeat" value=""/>
+				<property name="Sound_loop" value=""/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_cancel" value="chest_tier5_close"/>
+				<property name="Sound_empty" value="dryfire"/>
+				<property name="Sound_reload" value="sniperrifle_reload"/>
+				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Zoom"/>
+				<property name="Zoom_max_out" value="55"/>
+				<property name="Zoom_max_in" value="55"/>
+				<property name="ScopeCameraOffset" value="-0.0007,-.014,-.05"/>
+				<property name="zoomTriggerEffectPullDualsense" value="PistolZoom"/>
+				<property name="zoomTriggerEffectPullXb" value="PistolZoom"/>
+			</property>
+			<effect_group name="Deco">
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="AddPart" part="Base" prefab="@:Other/Items/Weapons/Ranged/Sharp Shooter/sharpShooterGunPrefab.prefab" parentTransform="Handle" localPos="0,0.0,-0.1" localRot="0,0,0"/>				
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="AddPart" part="Base2" prefab="@:Other/Items/Weapons/Melee/TaserBaton/TaserBatonPrefab.prefab" parentTransform="Handle" localPos="0,.065,0.11" localRot="90,0,0"/>
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="AddPart" part="Base3" prefab="@:Other/Items/Weapons/Melee/TaserBaton/TaserBatonPrefab.prefab" parentTransform="Barrel" localPos="0,0.017,0.2128" localRot="-90,180,0"/>
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="SetTransformActive" active="false" transform_path="ProjectileJoint"/>
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="SetTransformActive" active="false" transform_path="crossbow_mesh"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="AddPart" part="Sparks" prefab="ItemModEffects/baton_electricityPrefab" parentTransform="Barrel" localPos="0,.03,0" localRot="90,0,0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemovePart" part="Sparks"/>
+				<triggered_effect trigger="onSelfEquipStart" action="RemovePart" part="Sparks"/>
+				<triggered_effect trigger="onReloadStart" action="RemovePart" part="Sparks"/>
+				<triggered_effect trigger="onReloadStop" action="RemovePart" part="Sparks"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="Base"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="Base1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="Base2"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="Sparks"/>
+				<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="ProjectileJoint"/>
+				<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="crossbow_mesh"/>
+			</effect_group>
+			<effect_group name="Railgun">
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="laserrifle_idle" />
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="StopSound" sound="laserrifle_idle" />
+				<triggered_effect trigger="onSelfEquipStop" action="StopSound" sound="laserrifle_idle" />
+				<triggered_effect trigger="onReloadStart" action="StopSound" sound="laserrifle_idle" />
+				<triggered_effect trigger="onReloadStop" action="StopSound" sound="laserrifle_idle" />
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="buffrailgunchargingup" />
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffrailgunchargingup" />
+				<triggered_effect trigger="onReloadStart" action="RemoveBuff" buff="buffrailgunchargingup" />
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffrailgunchargingup" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$charge" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$charge" operation="set" value="0"/>
+				<triggered_effect trigger="onReloadStart" action="ModifyCVar" cvar="$charge" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chargeB" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$chargeB" operation="set" value="0"/>
+				<triggered_effect trigger="onReloadStart" action="ModifyCVar" cvar="$chargeB" operation="set" value="0"/>
+				<passive_effect name="MaxRange" operation="base_set" value="200"/>
+				<passive_effect name="ProjectileVelocity" operation="perc_subtract" value="@$charge"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="150"/>
+				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2"/>
+				<!-- random effective rng -->
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="50"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="10"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/>
+				<!-- 2.7s -->
+				<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/>
+				<!-- tier bonus -->
+				<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkDeadEye"/>
+				<!-- random DegMax -->
+				<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05"/>
+				<!-- random APM -->
+				<passive_effect name="MagazineSize" operation="base_add" value="-.5,1.6"/>
+				<!-- random MagazineSize -->
+				<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08"/>
+				<!-- random WeaponHandling -->
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".04"/>
+				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".2"/>
+				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5"/>
+				<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2"/>
+				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="1.75"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="3.4"/>
+				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.3"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".3"/>
+				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="11"/>
+				<passive_effect name="WeaponHandling" operation="base_set" value=".7"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="200,400" tier="1,6" tags="perkDeadEye"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkDeadEye"/>
+				<passive_effect name="EntityDamage" operation="perc_subtract" value="@$chargeB"/>
+			</effect_group>
+		</item>
+
+		<item name="RailgunAmmo">
+			<property name="CustomIcon" value="ammoDartIron"/>
+			<property name="CustomIconTint" value="180,180,255"/>
+			<property name="DescriptionKey" value="RailgunAmmoDesc"/>			
+			<property name="ItemTypeIcon" value="star"/>
+			<property name="Tags" value="ammo,ranged"/>
+			<property name="DisplayType" value="ammoBulletAP"/>
+			<property name="Meshfile" value="prefabs/electricshock"/>
+			<property name="HoldType" value="45"/>
+			<property name="HandMeshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="IsSticky" value="false"/>
+			<property name="Stacknumber" value="30000"/>
+			<property name="FuelValue" value="8"/>
+			<property name="EconomicValue" value="12"/>
+			<property name="EconomicBundleSize" value="5"/>
+			<property name="Group" value="Ammo/Weapons"/>
+			<property class="Action1">
+				<property name="Class" value="Projectile"/>
+				<property name="Explosion.ParticleIndex" value="0"/>
+				<property name="Gravity" value="-3"/>
+				<property name="FlyTime" value="0"/>
+				<property name="LifeTime" value="14"/>
+			</property>
+			<effect_group name="RailgunAmmo" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="300"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="30"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value=".1" tags="wood"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth,metal,cloth"/>
+				<passive_effect name="ProjectileVelocity" operation="base_set" value="150"/>
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.75"/>
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="3"/>
+				<display_value name="dTargetPenetration" value="3"/>
+				<display_value name="dTargetArmor" value="-.75"/>
+			</effect_group>
+		</item>
+
+	</append>
+</configs>

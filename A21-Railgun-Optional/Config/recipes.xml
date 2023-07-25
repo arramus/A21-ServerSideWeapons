@@ -1,0 +1,15 @@
+<configs>
+	<append xpath="/recipes">
+		<recipe name="Railgun" count="1" craft_area="workbench" craft_time="240" tags="workbenchCrafting,learnable">
+			<ingredient name="gunRifleT1HuntingRifleParts" count="1"/>
+			<ingredient name="meleeWpnBatonT2StunBatonParts" count="2"/>
+			<ingredient name="resourceForgedSteel" count="50"/>
+			<ingredient name="resourceMechanicalParts" count="12"/>
+			<ingredient name="resourceElectricParts" count="12"/>
+		</recipe>
+		<recipe name="RailgunAmmo" count="1" craft_area="workbench" craft_time="5">
+			<ingredient name="ammoDartIron" count="1"/>
+			<ingredient name="resourceForgedSteel" count="1"/>
+		</recipe>
+	</append>
+</configs>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="A21-Railgun-Optional" />
+	<DisplayName value="A21 Railgun" />
+	<Description value="Custom server side weapon." />
+	<Author value="Snufkin, with update by arramus" />
+	<Version value="21.0.1.1" />
+	<Website value="" />
+</xml>

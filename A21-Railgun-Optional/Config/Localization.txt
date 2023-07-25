@@ -1,0 +1,6 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
+
+Railgun,items,item,,,Railgun,,,,,,,,,,,,,
+RailgunDesc,items,item,,,"(Perception + Dead Eye) A modified sniper rifle that uses an electromagnetic coil to fire a steel projectile at high velocity. Needs charging before shooting by holding primary action. The longer you charge the higher the damage and flytime of the projectile will be. A full charge is indicated by beeps.",,,,,,,,,,,,,
+RailgunAmmo,items,item,,,Railgun Ammo,,,,,,,,,,,,,
+RailgunAmmoDesc,items,item,,,"A steel projectile that is fired from the Railgun at high velocity for devastating impact.",,,,,,,,,,,,,
