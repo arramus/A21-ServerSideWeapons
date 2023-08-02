@@ -1,19 +1,21 @@
 <configs>
 	<insertBefore xpath="/lootcontainers/lootgroup[@name='groupGunSafeSecure']" >
-	<lootgroup name="ServerSideWeapons">
-		<item name="Railgun" prob=".025"/>
+	<lootgroup name="ServerSideWeaponsRailgun">
+		<item name="Railgun" prob=".1"/>
+		<item name="RailgunAmmo" count="1,20"/>
+		<item name="riflesSkillMagazine" count="1,2"/>		
 	</lootgroup>
 	</insertBefore>
 
 	<append xpath="/lootcontainers/lootcontainer[@name='smallSafes']"> <!--WallSafe / DeskSafe-->
-		<item group="ServerSideWeapons" count="1,2" prob="0.25"/>
+		<item group="ServerSideWeaponsRailgun" count="1,2" prob="0.25"/>
 	</append>
 	
 	<append xpath="/lootcontainers/lootcontainer[@name='gunSafe']"> <!--Gun Safe-->
-		<item group="ServerSideWeapons" count="1,2" prob="0.25"/>
+		<item group="ServerSideWeaponsRailgun" count="1,2" prob="0.25"/>
 	</append>
 	
 	<append xpath="/lootcontainers/lootcontainer[@name='buriedTreasure']"> <!--Buried Loot Treasure Chest-->
-		<item group="ServerSideWeapons" count="1,2" prob="0.5"/>
+		<item group="ServerSideWeaponsRailgun" count="1,2" prob="0.5"/>
 	</append>
 </configs>
