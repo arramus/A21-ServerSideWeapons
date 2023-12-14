@@ -13,6 +13,7 @@
 			<property name="DropMeshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 			<property name="Material" value="MRifleParts"/>
 			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="ItemTypeIcon" value="star"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="SoundJammed" value="weapon_jam"/>
 			<property name="Attachments" value="meleeToolFlashlight02"/>

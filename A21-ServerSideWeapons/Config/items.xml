@@ -117,6 +117,7 @@
 			<property name="DropMeshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 			<property name="Material" value="MRifleParts"/>
 			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="ItemTypeIcon" value="star"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="SoundJammed" value="weapon_jam"/>
 			<property name="Attachments" value="meleeToolFlashlight02"/>
@@ -292,6 +293,7 @@
 	<property name="Material" value="MRifleParts"/>
 	<property name="Weight" value="1"/>
 	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="ItemTypeIcon" value="star"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
 	<property name="Attachments" value="meleeToolFlashlight02"/>
@@ -847,6 +849,7 @@
 			<property name="TintColor" value="210,105,30"/>
 			<property name="Material" value="MHandGunParts"/>
 			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="ItemTypeIcon" value="star"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="SoundJammed" value="weapon_jam"/>
 			<property name="Attachments" value="meleeToolFlashlight02"/>
@@ -1072,6 +1075,7 @@
 			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Bows/Arrows/arrow_steelPrefab.prefab"/>
 			<property name="StickyMeshFile" value="@:Other/Items/Weapons/Ranged/Bows/Arrows/arrow_steelPrefab.prefab"/>
 			<property name="CustomIcon" value="ammoArrowSteelAP"/>
+			<property name="ItemTypeIcon" value="star"/>
 			<property name="DescriptionKey" value="ammoRedWidowDesc"/>	
 			<property name="CustomIconTint" value="163, 20, 20"/>
 			<property name="TintColor" value="163, 20, 20"/>
@@ -1096,6 +1100,7 @@
 			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Bows/Arrows/arrow_steelPrefab.prefab"/>
 			<property name="StickyMeshFile" value="@:Other/Items/Weapons/Ranged/Bows/Arrows/arrow_steelPrefab.prefab"/>
 			<property name="CustomIcon" value="ammoArrowSteelAP"/>
+			<property name="ItemTypeIcon" value="star"/>
 			<property name="DescriptionKey" value="ammoBlueWidowDesc"/>
 			<property name="CustomIconTint" value="3, 74, 255"/>
 			<property name="TintColor" value="3, 74, 255"/>
@@ -1128,6 +1133,7 @@
 			<property name="TintColor" value="83, 69, 54"/>
 			<property name="Weight" value="1"/>
 			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="ItemTypeIcon" value="star"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="SoundJammed" value="weapon_jam"/>
 			<property name="Attachments" value="meleeToolFlashlight02"/>
