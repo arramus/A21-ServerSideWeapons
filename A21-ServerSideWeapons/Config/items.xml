@@ -106,7 +106,6 @@
 		</item>
 		
 		<item name="gunRifleT3DCLXVIZeus">
-			<property name="ItemTypeIcon" value="star"/>
 			<property name="CustomIcon" value="meleeToolSalvageT3ImpactDriver"/>
 			<property name="CustomIconTint" value="180,180,255"/>
 			<property name="DescriptionKey" value="gunRifleT3DCLXVIZeusDesc"/>			
@@ -838,7 +837,6 @@
 		</item>
 		
 		<item name="gunNewcomen">
-			<property name="ItemTypeIcon" value="star"/>
 			<property name="CustomIconTint" value="200, 0, 200"/>
 			<property name="CustomIcon" value="meleeToolRepairT3Nailgun"/>
 			<property name="DescriptionKey" value="gunNewcomenDesc"/>
@@ -1121,7 +1119,6 @@
 		</item>
 		
 		<item name="gunShotgunQuadrupleBarrel">
-			<property name="ItemTypeIcon" value="star"/>
 			<property name="CustomIcon" value="gunShotgunT1DoubleBarrel"/>
 			<property name="CustomIconTint" value="180,180,255"/>
 			<property name="DescriptionKey" value="gunShotgunQuadrupleBarrelDesc"/>

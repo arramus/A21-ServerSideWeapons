@@ -2,7 +2,6 @@
 	<append xpath="/items">
 			
 		<item name="Railgun">
-			<property name="ItemTypeIcon" value="star"/>
 			<property name="CustomIcon" value="gunRifleT3SniperRifle"/>
 			<property name="CustomIconTint" value="180,180,255"/>
 			<property name="DescriptionKey" value="RailgunDesc"/>			
